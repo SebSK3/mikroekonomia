@@ -59,15 +59,12 @@ To jest opracowanie wszystkich wykładów, starając się zrozumieć o co chodzi
   ]
 )
 
-*Czynniki produkcji / Zasoby*:
+== Czynniki produkcji / Zasoby
 
 / Naturalne: dostarczane przez przyrodę.
-
 / Siła robocza ("praca"): zdolności fizyczne i umysłowe, jakie ludzie mogą zaangażować w tworzenie dóbr i usług. Za korzystanie z pracy płaci się wynagrodzenie.
-
-/ Kapitał: Środki, które wytwarzają ludzie w celu tworzenia innych dóbr i usług.
-
-/ Technologia: Przetwarzanie w sposób celowy i ekonomiczny dóbr naturalnych w dobra użyteczne; wiedza o tym procesie.
+/ Kapitał: środki, które wytwarzają ludzie w celu tworzenia innych dóbr i usług.
+/ Technologia: przetwarzanie w sposób celowy i ekonomiczny dóbr naturalnych w dobra użyteczne; wiedza o tym procesie.
 
 #align(center)[
   #table(
@@ -82,4 +79,117 @@ To jest opracowanie wszystkich wykładów, starając się zrozumieć o co chodzi
     [Kapitał], [Kapitał ludzki (jakość), kapitał rzeczowy (wielkość, jakość)],
     [Technologia (wiedza)], [Postęp technologiczny]
   )
+]
+
+== Ekonomia
+
+/ Ekonomia: to nauka badająca jak ludzie radzą sobie z rzadkością, czyli brakiem nieograniczonej dostępności dóbr.
+Przedmiotem ekonomii jest problem wyboru, czyli *które z nieograniczonych potrzeb społecznych zostaną zaspokojone przez ograniczone zasoby.*
+
+#line(length: 100%, stroke: 0.25pt)
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2em,
+  [
+    #align(center)[*Mikroekonomia*]
+    Zajmuje się badaniem zachowania indywidualnych podmiotów gospodarczych. Bada rynki funkcjonujące w ramach gospodarki.
+    Patrzy na gospodarkę przez pryzmat pojedynczego przedsiębiorstwa i konsumenta.
+  ],
+  [
+    #align(center)[*Makroekonomia*]
+    Ocenia ogólny stan gospodarki, objaśnia zachodzące zmiany w gospodarce, wpływające na położenie pojedynczych gospodarstw domowych,
+    przedsiębiorstw i na sytuację na poszczególnych rynkach. Bada funkcjonowanie i rozwój gospodarki narodowej jako całości.
+  ]
+)
+#line(length: 100%, stroke: 0.25pt)
+
+*Cele ekonomii*:
+- poznanie rzeczywistości gospodarczej 
+- poznanie praw ekonomicznych
+- rozwiązanie problemów gospodarczych
+
+== Źródła poznania rzeczywistości w ekonomii
+
+1. Obserwacja rzeczywistości - konieczność przyjmowania założeń, które uproszczają analizowany problem, ale nie wpływają istotnie na treść odpowiedzi. Przykładowe założenia:
+  - Zasada _ceteris paribus_  - pozostałe czynniki bez zmian. Badamy tylko jeden czynnik.
+  - Błąd logiczny _post hoc ergo propet hoc_ - po tym, a więc wskutek tego. Np. jeśli kogut pieje przed wschodem, to błędem jest, że na wskutek pienia koguta wschodzi słońce.
+  - Błąd złożenia (kompozycji) - całość nie zawsze jest sumą części. Np. siedzisz na stadionie i widzisz słabo, jak wstaniesz widzisz lepiej, to błędem jest, że jeśli wszyscy wstaną to będą dobrze widzieć.
+2. Metody analityczne - analizy statystyczne, budowa modeli (np. krzywa możliwości produkcyjnych)
+3. Eksperymenty - ekonomia nie jest nauką eksperymentalną, ponieważ ekonomista nie może zmieniać dowolnie
+polityki pieniężnej po to by zebrać dane do teorii.
+Ekonomista ma za to analizę wydarzeń z przeszłości, które pozwalają zilustrować i ocenić współczesne teorie.
+
+== Prawa ekonomiczne
+
+Prawa ekonomiczne:
+- stale powtarzające się w danych warunkach relacje pomiędzy zjawiskami i procesami ekonomicznymi
+- są efektem badań ekonomicznych
+- służą alokacji zasobów, ale przede wszystkim osiąganiu wzrostu i rozwoju gospodarczego, w oparciu o ład gospodarczy i wartości
+
+Charakter praw ekonomicznych:
+- obiektywność działania - istnieją realnie, są niezależne od świadomości i woli ludzi, występuje możliwość dostosowania się i ich wykorzystania
+- statystyczność - są poznawalane poprzez zjawiska masowe, nie tłumaczą każdego indywidualnego zjawiska. Zjawiska indywidualne *nie mogą* być podstawą do żadnych uogólnień.
+- historyczność - istnieją tak długo jak określone warunki ekonomiczne i zmieniają się w raz ze zmianami gospodarki.
+
+
+== Rozwiązywanie problemów gospodarczych
+
+Trzy podstawowe pytania:
+
+/ Co: \- które dobra należy wytworzyć
+/ Jak: \- w jaki sposób mają być one wytworzone
+/ Dla kogo: \- czyli kto je otrzyma
+
+== Ujęcia problemów w ekonomii
+
+#grid(
+  columns: (1fr, 0pt, 1fr),
+  gutter: 1em,
+  grid.vline(x: 1, stroke: 0.25pt),
+  [
+    #align(center)[*Ekonomia Pozytywna*]
+    - Opisuje rzeczywistość gospodarczą za pomocą narzędzi i metod analizy
+    - Odpowiada na pytanie "Jak gospodarka funkcjonuje?"
+    - Unika ocen wartościujących
+    - Wyjaśnia prawidłowości dotyczące rzewczywistości społeczno-gospodarczej (przyczyny, uwarunkowania i następstwa)
+  ],
+  [],
+  [
+    #align(center)[*Ekonomia Normatywna*]
+    - Formułuje sądy wartościujące - zalecenia oparte na subiektywnym wartościowaniu zjawisk
+    - Odpowiada na pytanie "Jak gospodarka powinna funkcjonować?"
+    - Jest to system poglądów wartościujących, budowany na gruncie rezultatów dostarczanych przez ekonomię pozytywną
+  ]
+)
+Nie ma jednej teorii ekonomicznej opisującej rzeczywistość gospodarczą w sposób satysfakcjonujący wszystkich i nie budzący wątpliwości.
+
+== Racjonalność
+
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 1em,
+  [
+    *Wybór racjonalny* to najlepszy spośród konkurencyjnych wobec siebie rozwiązań.
+    Postępowanie racjonalne polega na dążeniu do minimalizacji ryzyka nieosiągnięcia założonego celu.
+  ],
+  [
+    #align(center)[*Homo Oeconomicus*]
+    - jednostka która działa racjonalnie,
+    - dąży zawsze do maksymalizacji osiąganych zysków,
+    - dokonuje wyborów ze względu na wartość ekonomiczną rzeultatów tych wyborów
+  ]
+)
+
+*Zasada racjonalności gospodarowania*:
+- zasada *największego efektu* przy danym nakładzie środków
+- zasada *najmniejszego nakładu środków* w celu osiągnięcia danego efektu
+
+Racjonalni ludzie biorą pod uwagę wielkości krańcowe.
+1. Zmiany krańcowe - zmiany na granicy, niewielkie, stopniowe zmiany dotychczasowego planu działania.
+2. Porównując koszty i korzyści krańcowe jesteśmy w stanie racjonalnie podjąć decyzję (tak długo jak nabywca płaci więcej niż wynosi koszt krańcowy, opłaca się sprzedać).
+3. Racjonalny decydent zaczyna działać tylko wtedy, gdy korzyść krańcowa jest wyższa niż koszt krańcowy.
+
+#align(center)[
 ]
