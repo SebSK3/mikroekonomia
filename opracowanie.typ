@@ -440,3 +440,66 @@ Wskazuje maksymalną ilość jednego dobra, którą możemy nabyć przy określo
     ]
   )
 ]
+
+== Teoria użyteczności
+
+Aby przewidzieć reakcję konsumentów na zmiany cen lub dochodów nie wystarczy znać ograniczeń budżetowych. Potrzebna jest także *teoria użyteczności*.
+
+/ Użyteczność: poziom zadowolenia lub szczęścia danej osoby w konsekwnecji jej wyborów konsumpcyjnych.
+/ Teoria kardynalna: zakłada *wymierność* użyteczności, czyli że ludzką satysfakcję da się przeliczyć na konkretne, bezwzględne liczby. Zwane są jako *utyle* lub jednostki użyteczności.
+/ Użyteczność całkowita (TU): satysfkacja z konsumpcji danej ilości określonego dobra.
+/ Użyteczność krańcowa (MU): przyrost użyteczności całkowitej spowodowany wzrostem konsumpcji dobra o jednostkę.
+
+#v(2em)
+
+$
+  mark(M\U(X), tag: #<mu>) = mark("zmiana użyteczności całkowitej", tag: #<zm1>) / mark("zmiana konsumowanej ilości X", tag: #<zm2>)
+  #annot(<mu>, pos: bottom + left, dy: 1em)[Różnica satysfakcji przy otrzymaniu \ jeszcze jednego dobra $X$]
+  #annot(<zm1>, pos: top, dy: -1em)[#align(center)[Różnica poziomu całkowitego zadowolenia \ $Delta T\U$]]
+  #annot(<zm2>, pos: bottom, dy: 1em)[#align(center)[$Delta X$ \ O ile sztuk zmieniło się dobro X]]
+$
+
+#v(2.5em)
+
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2em,
+  [
+Wyjaśnienie powyższego wzoru: wyobraź sobie że dostajesz pączka i daje ci to satysfakcję 10. Wtedy:
+$
+  M\U(X)=10 quad T\U(X)=10 quad Delta X = 1
+$
+Dostajesz drugiego pączka.
+Drugi pączek daje ci tylko 8 satysfakcji. Zatem:
+$
+  M\U(X)=8 quad T\U(X)=18 quad Delta X = 1
+$
+],
+[
+#align(center)[
+W tabeli wyglądałoby to tak:
+  #block(breakable: false)[
+    #table(
+      columns: (auto, auto, auto),
+      align: (left, center),
+      fill: (x, y) => if y == 0 { luma(240) }, // Jasnoszare tło dla pierwszego rzędu (nagłówka)
+    
+      [*$X$*], [*$M\U(X)$*], [*$T\U(X)$*],
+    
+      [0], [-], [0],
+      [1], [10], [10],
+      [2], [8], [18],
+    )
+  ]
+]
+])
+
+*I prawo Gossena* - prawo malejącej użyteczności krańcowej. Każda następna jednostka dobra daje coraz mniejsze przyrosty użyteczności
+(coraz mniejsze $M\U(X)$). Max jest osiągnięty gdy $M\U(X) = 0$. Może to wejść na wartości ujemne np. powodzenia w zjedzeniu 30tego pączka.
+
+*II prawo Gossena* - konsument osiąga stan równowagi, gdy w pełni wydatkując swoje dochody uzyskuje jednakową użyteczność krańcową
+w przeliczeniu na jednostkę pieniężną z każdego zakupionego dobra. $(M\U(X))/P(X) = (M\U(Y))/P(Y)$ - we wzorze nie występuje
+ilość, ponieważ szukamy sytuacji, gdzie każda wydana złotówka na dobro X da taką samą satysfakcję jak każda złotówka
+wydana na dobro Y - czyli ilość jest "schowana" za $M\U$.
+
