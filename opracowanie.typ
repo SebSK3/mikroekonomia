@@ -1,4 +1,7 @@
 #import "@preview/gentle-clues:1.3.1": *
+#import "@preview/mannot:0.3.3": mark, annot
+#import "@preview/cetz:0.5.2"
+
 #set document(title: "Specyfikacja wymagań systemowych", author: "Aaa")
 #set page(paper: "a4", margin: 1.5cm, numbering: "1", footer: context [
     #set text(11pt)
@@ -205,3 +208,71 @@ Dotyczy zmniejszania się przyrostu produktu w miarę dodawania kolejnych jednak
 
 Przykład: Jak mamy 1 kucharza na kuchni, to jeśli dołożymy drugiego, to kuchnia będzie znacząco wydajniejsza. Z każdym następnym kucharzem
 wydajność ta maleje.
+
+= Teoria wyboru konsumenta
+
+- Ludzie są zmuszeni dokonywać wyborów
+- Kosztem jest to, z czego musisz zrezygnować, aby osiągnąć swój cel
+- Ludzie reagują na bodźce
+
+== Ograniczenie budżetowe konsumenta / Możliwości nabywcze konsumenta
+
+Wskazuje maksymalną ilość jednego dobra, którą możemy nabyć przy określonej nabywanej ilości drugiego dobra.
+#v(1em)
+
+#line(length: 100%, stroke: 0.25pt)
+
+#align(center)[*Linia ograniczenia budżetowego*]
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2em,
+  [
+    $
+      mark(m, tag: #<m>) = mark(p_X, tag: #<px>) * mark(q_X, tag: #<qx>) + mark(p_Y, tag: #<py>) * mark(q_Y, tag: #<qy>)
+      #annot(<m>, pos: bottom + left, dy: 1em)[Budżet]
+
+      #annot(<px>, pos: top, dy: -1em)[Cena X]
+      #annot(<qx>, pos: bottom, dy: 1em)[Ilość X]
+  
+      #annot(<py>, pos: top, dy: -1em)[Cena Y]
+      #annot(<qy>, pos: bottom + right, dy: 1em)[Ilość Y]
+    $
+    #v(1em)
+    - Wskazuje na substytucyjność dóbr
+    - Relacja wymienna między dobrami X i Y jest stała wzdłuż danej linii budżetowej
+    Jest zbiorem punktów przedstawiających wszystkie możliwe kombinacje nabywanych ilości dóbr X i Y przy wykorzystaniu całego dostępnego dochodu (m).
+
+    Nachylenie linii ograniczenia budżetowego: \ $(Delta y) / (Delta x) = - p_x / p_y = tg alpha$
+  ],
+  [
+    #align(center)[
+      #cetz.canvas({
+        import cetz.draw: *
+        import cetz.angle: angle
+
+        line((0, 0), (0, 4), (5, 0), close: true, fill: rgb("4A90E2").lighten(80%), stroke: none)
+
+        line((0, 0), (6, 0), mark: (end: ">")) 
+        line((0, 0), (0, 5), mark: (end: ">")) 
+
+        line((0, 4), (5, 0), stroke: (paint: blue, thickness: 1.5pt))
+
+        content((6.2, -0.3), [$q_X$])
+        content((-0.4, 5.2), [$q_Y$])
+
+        content((-0.6, 4), [$m/p_Y$])
+        content((5, -0.5), [$m/p_X$])
+
+        angle((5, 0), (0, 4), (0, 0), label: [$alpha$], radius: 1.2, label-radius: 75%)
+
+        content((3.5, 2.5), text(blue)[Linia budżetowa])
+      })
+    ]
+  ]
+)
+
+
+
+
+
