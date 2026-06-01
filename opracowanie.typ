@@ -274,52 +274,169 @@ Wskazuje maksymalną ilość jednego dobra, którą możemy nabyć przy określo
 
 === Interpretowanie równań
 
-#info(title: "Można skipnąć")[Jeśli rozumiesz to co jest powyżej i interpretację tego, możesz pominąć to.]
+#info(title: "Można skipnąć")[
+  Jeśli rozumiesz to co jest powyżej i interpretację tego, możesz pominąć te interpretacje.
+  Jeśli nie wiesz o co chodzi, *musisz* przerobić te przykłady.
+]
 
 "j.p" => Jednostki pieniędzy (?)
 
-==== Przykład 1
+#block(breakable: false)[
+  #grid(
+    columns: (1fr, 1fr),
+    gutter: 2em,
+    [
+      ==== Przykład podstawienia
 
-$
-  
-$
+      #align(center)[
+        #scale(50%, reflow: true)[
+          #cetz.canvas({
+            import cetz.draw: *
+            import cetz.angle: angle
 
-#align(center)[
-  #cetz.canvas({
-    import cetz.draw: *
-    import cetz.angle: angle
+            content((5, 9.5), [Dane: $quad p_Y = 10 "j.p" quad 50 = 5 q_X + 10 q_Y quad p_X = 5 "j.p" quad$])
+            content((5, 9), [Narysuj wykres, wyznacz punkty przecięcia z osią X oraz Y. Oblicz: $tg alpha$, $q_Y$, $q_X$])
+            content((5, 8.3), [Z ilu sztuk dobra X trzeba zrezygnować aby kupić dodatkową sztukę dobra Y? Zaznacz na wykresie.])
 
-    content((5, 9.5), [Dane: $quad p_Y = 10 "j.p" quad 50 = 5 q_X + 10 q_Y quad p_X = 5 "j.p" quad$])
-    content((5, 9), [Narysuj wykres, wyznacz punkty przecięcia z osią X oraz Y. Oblicz: $tg alpha$, $q_Y$, $q_X$])
-    content((5, 8.3), [Z ilu sztuk dobra X trzeba zrezygnować aby kupić dodatkową sztukę dobra Y? Zaznacz na wykresie.])
+            line((0, 0), (13, 0), mark: (end: ">"), stroke: 1.2pt)
+            line((0, 0), (0, 7.5), mark: (end: ">"), stroke: 1.2pt)
+            content((13.2, -0.2), text(size: 12pt)[X])
+            content((-0.3, 7.8), text(size: 12pt)[Y])
+            content((-0.3, -0.3), text(size: 12pt)[0])
 
-    line((0, 0), (13, 0), mark: (end: ">"), stroke: 1.2pt)
-    line((0, 0), (0, 7.5), mark: (end: ">"), stroke: 1.2pt)
-    content((13.2, -0.2), text(size: 12pt)[X])
-    content((-0.3, 7.8), text(size: 12pt)[Y])
-    content((-0.3, -0.3), text(size: 12pt)[0])
+            line((0, 5), (10, 0), stroke: 1.5pt + black)
 
-    line((0, 5), (10, 0), stroke: 1.5pt + black)
+            circle((0, 5), radius: 0.15, fill: rgb("A55252"), stroke: none)
+            content((-0.4, 5), text(fill: red, weight: "bold", size: 16pt)[5])
 
-    circle((0, 5), radius: 0.15, fill: rgb("A55252"), stroke: none)
-    content((-0.4, 5), text(fill: red, weight: "bold", size: 16pt)[5])
+            circle((10, 0), radius: 0.15, fill: rgb("A55252"), stroke: none)
+            content((10, -0.4), text(fill: red, weight: "bold", size: 16pt)[10])
 
-    circle((10, 0), radius: 0.15, fill: rgb("A55252"), stroke: none)
-    content((10, -0.4), text(fill: red, weight: "bold", size: 16pt)[10])
+            content((8, -0.2), text(fill: red, size: 12pt)[$8$])
+            content((-0.2, 1), text(fill: red, size: 12pt)[$1$])
+            line((0, 1), (8, 1), stroke: (paint: red, dash: "dashed"))
+            line((8, 1), (8, 0), stroke: (paint: red, dash: "dashed"))
 
-    content((8, -0.2), text(fill: red, size: 12pt)[$8$])
-    content((-0.2, 1), text(fill: red, size: 12pt)[$1$])
-    line((0, 1), (8, 1), stroke: (paint: red, dash: "dashed"))
-    line((8, 1), (8, 0), stroke: (paint: red, dash: "dashed"))
+            content((11, 6), text(fill: red)[
+              $tg alpha = - 5/10=-0.5$ \
+              $q_Y = 5 - 0.5q_X$ \
+              $q_X = 10 - 2q_Y$
+            ])
+            content((5, -1.4), text(fill: red)[
+            Skoro $q_X = 10 - 2q_Y$, to znaczy, że gdy podstawimy jako $q_Y$ jako $1$, to: \
+            $q_X = 10 - 2$, zo oznacza, że musieliśmy zrezygnować z $2$ sztuk dobra $X$
+            ])
+          })
+        ]
+      ]
+    ],
+    [
+      ==== Przykład wzrostu dochodu
 
-    content((11, 6), text(fill: red)[
-      $tg alpha = - 5/10=-0.5$ \
-      $q_Y = 5 - 0.5q_X$ \
-      $q_X = 10 - 2q_Y$
-    ])
-    content((5, -1.4), text(fill: red)[
-    Skoro $q_X = 10 - 2q_Y$, to znaczy, że gdy podstawimy jako $q_Y$ jako $1$, to: \
-    $q_X = 10 - 2$, zo oznacza, że musieliśmy zrezygnować z $2$ sztuk dobra $X$
-    ])
-  })
+      #align(center)[
+        #scale(50%, reflow: true)[
+          #cetz.canvas({
+            import cetz.draw: *
+
+            content((9, 11), [Dane początkowe: $ m_0 = 50 quad p_X = 5 "j.p" quad p_Y = 10 "j.p"$])
+            content((9, 10.5), [Wzrost dochodu do: $ m_1 = 80 "j.p"$ (ceny pozostają bez zmian)])
+            content((9, 10), [Narysuj przesunięcie linii ograniczenia budżetowego. Oblicz nowe $q_Y$ i $q_X$.])
+
+            line((0, 0), (18, 0), mark: (end: ">"), stroke: 1.2pt)
+            line((0, 0), (0, 10), mark: (end: ">"), stroke: 1.2pt)
+            content((18.2, -0.4), text(size: 12pt)[X])
+            content((-0.4, 10.3), text(size: 12pt)[Y])
+            content((-0.3, -0.3), text(size: 12pt)[0])
+
+            line((0, 5), (10, 0), stroke: 1.5pt + black)
+            circle((0, 5), radius: 0.15, fill: black, stroke: none)
+            content((-0.5, 5), text(weight: "bold", size: 14pt)[5])
+            
+            circle((10, 0), radius: 0.15, fill: black, stroke: none)
+            content((10, -0.5), text(weight: "bold", size: 14pt)[10])
+
+            line((0, 8), (16, 0), stroke: 1.5pt + rgb("A55252"))
+            circle((0, 8), radius: 0.15, fill: rgb("A55252"), stroke: none)
+            content((-0.5, 8), text(fill: rgb("A55252"), weight: "bold", size: 14pt)[8])
+            
+            circle((16, 0), radius: 0.15, fill: rgb("A55252"), stroke: none)
+            content((16, -0.5), text(fill: rgb("A55252"), weight: "bold", size: 14pt)[16])
+
+            line((2, 4), (4.5, 5.75), mark: (end: ">"), stroke: (paint: blue, dash: "dashed"))
+            line((5, 2.5), (7.5, 4.25), mark: (end: ">"), stroke: (paint: blue, dash: "dashed"))
+            line((8, 1), (10.5, 2.75), mark: (end: ">"), stroke: (paint: blue, dash: "dashed"))
+
+            content((6, 7.5), text(fill: rgb("A55252"))[
+              *Nowa sytuacja ($m_1=80$):* \
+              $80 = 5 q_X + 10 q_Y$ \
+              $10 q_Y = 80 - 5 q_X$ \
+              $q_Y = 8 - 0.5 q_X$ \
+              $q_X = 16 - 2 q_Y$
+            ])
+
+            content((13, 5), text(fill: blue)[
+              *Ważne:* \
+              $tg alpha = - 5/10 = -0.5 = "const"$ \
+              Wzrost dochodu powoduje \
+              *równoległe* przesunięcie \
+              linii budżetowej w prawo, \
+              ponieważ ceny dóbr ($p_X, p_Y$) \
+              nie uległy zmianie.
+            ])
+          })
+        ]
+      ]
+    ],
+    [
+      ==== Przykład wzrostu ceny 1 dobra
+
+      #align(center)[
+        #scale(50%, reflow: true)[
+          #cetz.canvas({
+            import cetz.draw: *
+
+            content((7, 9), [Dane początkowe: $ m_0 = 50 quad p_X = 5 "j.p" quad p_Y = 10 "j.p"$])
+            content((7, 8.5), [Wzrost ceny dobra X do: $ p_X = 10 "j.p"$ (dochód i $p_Y$ const)])
+            content((7, 8), [Narysuj rotację linii ograniczenia budżetowego. Oblicz nowe nachylenie.])
+
+            line((0, 0), (13, 0), mark: (end: ">"), stroke: 1.2pt)
+            line((0, 0), (0, 8), mark: (end: ">"), stroke: 1.2pt)
+            content((13.2, -0.4), text(size: 12pt)[X])
+            content((-0.4, 8.3), text(size: 12pt)[Y])
+            content((-0.3, -0.3), text(size: 12pt)[0])
+
+            circle((0, 5), radius: 0.15, fill: red, stroke: none)
+            content((-0.5, 5), text(weight: "bold", fill: red, size: 16pt)[5])
+
+            line((0, 5), (10, 0), stroke: 1.5pt + black)
+            circle((10, 0), radius: 0.15, fill: black, stroke: none)
+            content((10, -0.5), text(weight: "bold", fill: red, size: 16pt)[10])
+
+            line((0, 5), (5, 0), stroke: 1.5pt + rgb("A55252"))
+            circle((5, 0), radius: 0.15, fill: rgb("A55252"), stroke: none)
+            content((5, -0.5), text(weight: "bold", fill: red, size: 16pt)[5])
+
+            line((6, 2), (3, 2), mark: (end: ">"), fill: blue, stroke: (paint: blue, dash: "dashed"))
+
+            content((3, 6), text(fill: rgb("A55252"))[
+              *Nowa sytuacja ($p_X=10$):* \
+              $50 = 10 q_X + 10 q_Y$ \
+              Maks. ilość X (dla $q_Y=0$): \
+              $q_X = 50/10 = 5$
+            ])
+
+            content((10, 3), text(fill: blue)[
+              *Ważne:* \
+              Wzrost ceny dobra X powoduje \
+              *rotację* linii budżetowej \
+              do wewnątrz wokół stałego \
+              punktu na osi Y. \
+              Zmienia się nachylenie: \
+              $tg alpha = - 10/10 = -1$
+            ])
+          })
+        ]
+      ]
+    ]
+  )
 ]
