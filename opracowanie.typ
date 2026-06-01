@@ -38,7 +38,7 @@ To jest opracowanie wszystkich wykładów, starając się zrozumieć o co chodzi
 
 #pagebreak()
 
-#outline()
+#outline(depth: 1)
 
 #pagebreak()
 
@@ -182,6 +182,9 @@ Nie ma jednej teorii ekonomicznej opisującej rzeczywistość gospodarczą w spo
   ]
 )
 
+#align(center)[W rzeczywistości człowiek nie zachowuje się racjonalnie!]
+
+
 *Zasada racjonalności gospodarowania*:
 - zasada *największego efektu* przy danym nakładzie środków
 - zasada *najmniejszego nakładu środków* w celu osiągnięcia danego efektu
@@ -191,5 +194,14 @@ Racjonalni ludzie biorą pod uwagę wielkości krańcowe.
 2. Porównując koszty i korzyści krańcowe jesteśmy w stanie racjonalnie podjąć decyzję (tak długo jak nabywca płaci więcej niż wynosi koszt krańcowy, opłaca się sprzedać).
 3. Racjonalny decydent zaczyna działać tylko wtedy, gdy korzyść krańcowa jest wyższa niż koszt krańcowy.
 
-#align(center)[
-]
+== Koszt alternatywny
+
+*Koszt alternatywny* - konieczność dokonywania wyboru wiąże się z kosztem utraconych możliwości.
+Jest to koszt najlepszej niewykorzystanej alternatywy, określony jest przez wszystko to, z czego należy zrezygnować aby tę rzecz uzyskać.
+
+== Prawo malejących przychodów / Prawo malejącej wydajności krańcowej
+
+Dotyczy zmniejszania się przyrostu produktu w miarę dodawania kolejnych jednakowych jednostek nakładu zmiennego.
+
+Przykład: Jak mamy 1 kucharza na kuchni, to jeśli dołożymy drugiego, to kuchnia będzie znacząco wydajniejsza. Z każdym następnym kucharzem
+wydajność ta maleje.
