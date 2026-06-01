@@ -272,7 +272,54 @@ Wskazuje maksymalną ilość jednego dobra, którą możemy nabyć przy określo
   ]
 )
 
+=== Interpretowanie równań
 
+#info(title: "Można skipnąć")[Jeśli rozumiesz to co jest powyżej i interpretację tego, możesz pominąć to.]
 
+"j.p" => Jednostki pieniędzy (?)
 
+==== Przykład 1
 
+$
+  
+$
+
+#align(center)[
+  #cetz.canvas({
+    import cetz.draw: *
+    import cetz.angle: angle
+
+    content((5, 9.5), [Dane: $quad p_Y = 10 "j.p" quad 50 = 5 q_X + 10 q_Y quad p_X = 5 "j.p" quad$])
+    content((5, 9), [Narysuj wykres, wyznacz punkty przecięcia z osią X oraz Y. Oblicz: $tg alpha$, $q_Y$, $q_X$])
+    content((5, 8.3), [Z ilu sztuk dobra X trzeba zrezygnować aby kupić dodatkową sztukę dobra Y? Zaznacz na wykresie.])
+
+    line((0, 0), (13, 0), mark: (end: ">"), stroke: 1.2pt)
+    line((0, 0), (0, 7.5), mark: (end: ">"), stroke: 1.2pt)
+    content((13.2, -0.2), text(size: 12pt)[X])
+    content((-0.3, 7.8), text(size: 12pt)[Y])
+    content((-0.3, -0.3), text(size: 12pt)[0])
+
+    line((0, 5), (10, 0), stroke: 1.5pt + black)
+
+    circle((0, 5), radius: 0.15, fill: rgb("A55252"), stroke: none)
+    content((-0.4, 5), text(fill: red, weight: "bold", size: 16pt)[5])
+
+    circle((10, 0), radius: 0.15, fill: rgb("A55252"), stroke: none)
+    content((10, -0.4), text(fill: red, weight: "bold", size: 16pt)[10])
+
+    content((8, -0.2), text(fill: red, size: 12pt)[$8$])
+    content((-0.2, 1), text(fill: red, size: 12pt)[$1$])
+    line((0, 1), (8, 1), stroke: (paint: red, dash: "dashed"))
+    line((8, 1), (8, 0), stroke: (paint: red, dash: "dashed"))
+
+    content((11, 6), text(fill: red)[
+      $tg alpha = - 5/10=-0.5$ \
+      $q_Y = 5 - 0.5q_X$ \
+      $q_X = 10 - 2q_Y$
+    ])
+    content((5, -1.4), text(fill: red)[
+    Skoro $q_X = 10 - 2q_Y$, to znaczy, że gdy podstawimy jako $q_Y$ jako $1$, to: \
+    $q_X = 10 - 2$, zo oznacza, że musieliśmy zrezygnować z $2$ sztuk dobra $X$
+    ])
+  })
+]
