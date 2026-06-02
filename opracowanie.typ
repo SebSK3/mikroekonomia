@@ -1021,3 +1021,104 @@ Pojęcie popytu:
     - paradoks spekulacyjny
   ]
 )
+
+== Podaż
+
+Producenci-sprzedawcy zgłaszają *podaż*, czyli przedstawiają ekonomicznie uzasadnioną
+ofertę dostaw rynkowych wytwarzanych dóbr. Mierzona jest ilością dóbr (Q), kształtowana jest przez cenę
+produktu (p)
+
+#align(center)[
+#block(breakable: false)[
+
+  *Prawo podaży*
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2em,
+  [
+  #cetz.canvas({
+    import cetz.draw: *
+    
+    line((0,0), (0, 6), mark: (end: "stealth", fill: black))
+    line((0,0), (8, 0), mark: (end: "stealth", fill: black))
+    
+    content((0, 6.25), [Cena (p)])
+    content((8.75, 0), [Ilość (Q)])
+    
+    bezier((0, 0.8), (7.5, 6), (4, 1), (6.5, 2.5), stroke: 1pt + black)
+    
+    line((3.5, 0), (3.5, 1.45), stroke: (dash: "dotted", thickness: 0.8pt))
+    line((0, 1.45), (3.5, 1.45), stroke: (dash: "dotted", thickness: 0.8pt))
+    
+    line((6, 0), (6, 3.15), stroke: (dash: "dotted", thickness: 0.8pt))
+    line((0, 3.15), (6, 3.15), stroke: (dash: "dotted", thickness: 0.8pt))
+    
+    circle((3.5, 1.45), radius: 0.08, fill: red, stroke: none)
+    circle((6, 3.15), radius: 0.08, fill: red, stroke: none)
+    
+    content((-0.5, 1.45), [ps1])
+    content((-0.5, 3.15), [ps2])
+    content((3.5, -0.4), [qs1])
+    content((6, -0.4), [qs2])
+    
+    content((6.8, 5.2), [#align(center)[(podaż)\ *S*]])
+  })
+  ], [
+    #v(5em)
+    Wraz ze wzrostem ceny rośnie ilość dobra, którą producenci są skłonni i są w stanie zaoferować na rynku przy założeniu, że pozostałe warunki nie uległy zmianie (ceteris paribus).
+
+    *Wielkosć podaży* to ilość dobra, jaką producenci są gotowi i są w stanie zaoferować na rynku w określonym czasie
+    przy danym poziomie ceny.
+  ])
+]
+]
+
+#align(center)[*Równowaga rynku*]
+
+#grid(
+  columns: (1.5fr, 1fr),
+  gutter: 1.5em,
+  align: (left + horizon, left + horizon),
+  [
+    #cetz.canvas({
+      import cetz.draw: *
+      
+      // Osie
+      line((0,0), (0, 6.5), mark: (end: "stealth", fill: black))
+      line((0,0), (8.5, 0), mark: (end: "stealth", fill: black))
+      
+      // Etykiety osi
+      content((-0.4, 6.3), text(size: 16pt)[P])
+      content((8.3, -0.4), text(size: 16pt)[Q])
+      
+      // Krzywa popytu (D) - brązowa
+      bezier((0.5, 6), (7, 1.2), (1.2, 2.2), (4, 1.5), stroke: 1.5pt + rgb("994422"))
+      // Krzywa podaży (S) - niebieska
+      bezier((0.5, 1.2), (6.5, 6), (5, 1.5), (6, 3), stroke: 1.5pt + blue)
+      
+      line((3.8, 0), (3.8, 1.8), stroke: (dash: "dotted", thickness: 0.8pt))
+      line((0, 1.85), (3.8, 1.85), stroke: (dash: "dotted", thickness: 0.8pt))
+      
+      circle((3.8, 1.85), radius: 0.08, fill: red, stroke: none)
+      
+      content((-1, 1.8), align(center)[#text(size: 16pt)[P#sub[E]] \ cena \ równowagi])
+      content((3.8, -0.6), align(center)[#text(size: 16pt)[Q#sub[E]] \ ilość równowagi])
+      
+      content((3.8, 2.5), align(center)[Równowaga \ #text(size: 16pt)[E]])
+      content((7.2, 1.8), text(size: 16pt)[D])
+      content((5.8, 5.9), text(size: 16pt)[S])
+    })
+  ],
+  [
+    Cena równowagi rynkowej (pE) jest to taka cena, przy której następuje zrównanie wielkości popytu z wielkością podaży.
+    
+    #v(1.5em)
+    
+    W warunkach #text(fill: red)[stałości czynników pozacenowych] osiąga się ją, zrównując obie jednoczynnikowe funkcje popytu i podaży:
+    
+    #align(center)[
+      $Q_D (p) = Q_S(p)$ \
+      $(-) quad (+)$
+    ]
+  ]
+)
