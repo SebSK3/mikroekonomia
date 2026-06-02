@@ -169,7 +169,6 @@ Nie ma jednej teorii ekonomicznej opisującej rzeczywistość gospodarczą w spo
 
 == Racjonalność
 
-
 #grid(
   columns: (1fr, 1fr),
   gutter: 1em,
@@ -505,10 +504,11 @@ wydana na dobro Y - czyli ilość jest "schowana" za $M\U$.
 
 === Przykład dla dwóch dóbr
 
-Czerwone, to miejsca niewypełnione.
+#warning(title: "Uwaga!")[Ten przykład jest niedokończony. Pomijam póki co, bo dla mnie jest prosty i nie mam czasu go rozpisywać.]
+
+Wypełnij tam gdzie czerwony minus.
 
 #align(center)[
-W tabeli wyglądałoby to tak:
   #block(breakable: false)[
     #table(
       columns: (auto, auto, auto, auto, auto, auto, auto, auto),
@@ -526,3 +526,238 @@ W tabeli wyglądałoby to tak:
     )
   ]
 ]
+
+== Teoria krzywych obojętności
+
+Spośród różnych koszyków dóbr osiągalnych przy danym dochodzie,
+konsument wybiera ten, który przynosi mu *największą satysfakcję*.
+
+/ Zasada kompleksowości preferencji: porównywalność kombinacji dóbr i zdolność konsumenta do określenia preferencji przy wyborze jednej z kombinacji.
+/ Zasada przechodności (zgodności) preferencji: porównywania i wybór dokonywane są zgodnie z logiką
+/ Zasada racjonalności: konsument stara się maksymalizować swoją użyteczność (wybór o największym zadowoloeniu)
+
+Zachowanie racjonalne - wewnętrznie spójne, logiczne postępowanie zmierzające do maksymalizacji satysfakcji
+jednostki osiąganej z konsumpcji (użyteczności).
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2em,
+  [
+    Jednostka dokonuje wyboru w celu maksymalizacji *własnej* satysfakcji:
+    - wybór struktury konsumpcji bieżącej, czyli konkretny zestaw rzeczy których jednostka pragnie,
+    - wybór ilości czasu pracy i czasu wolnego,
+    - optymalizacja konsumpcji w czasie, czyli podejmowania decyzji o wielkości oszczędności.
+  ], [
+    *Utrudnienia* w racjonalnym podejmowaniu decyzji:
+    - ograniczenia suwerenności konsumenta
+    - ograniczenie przejrzystości rynku
+    - zachowania nierynkowe
+    - zmiany poziomu życia konsumentów i nowe rodzaje konsumpcji: luksusowa, prestiżowa i snobistyczna
+  ]
+)
+
+
+#grid(
+  columns: (1fr, 1.2fr),
+  gutter: 2em,
+  [
+    *Krzywa obojętności* pokazuje kombinacje dóbr ($X$ i $Y$), które dają konsumentowi *taką samą użyteczność całkowitą* ($"TU" = "const"$).
+
+    - *Identyczna satysfakcja:* Punkty ($X_1, Y_1$), ($X_2, Y_2$) i ($X_3, Y_3$) leżą na $U_1$. Wybór między nimi jest obojętny.
+    - *Ujemne nachylenie:* Chcąc zyskać więcej dobra $X$, trzeba poświęcić część dobra $Y$.
+    - *Spłaszczanie w prawo:* Im mniej mamy dobra $Y$, tym trudniej nam z niego zrezygnować dla kolejnej sztuki $X$ (Krańcowa Stopa Substytucji).
+    - *Wyższe krzywe to lepiej:* $U_3$ daje większe zadowolenia niż $U_2$ i $U_1$. Im dalej od środka, tym wyższa użyteczność.
+    - *Zakaz przecinania:* Krzywe nigdy się nie przecinają (jeden koszyk nie może dawać dwóch różnych poziomów satysfakcji).
+  ],
+  [
+    #set align(center)
+    #cetz.canvas({
+      import cetz.draw: *
+
+      line((0, 0), (9, 0), mark: (end: ">"), stroke: 1.5pt)
+      line((0, 0), (0, 8), mark: (end: ">"), stroke: 1.5pt)
+
+      content((9.2, -0.3), [$X$])
+      content((-0.3, 8.2), [$Y$])
+
+      bezier((0.5, 6), (7, 0.5), (1.5, 1.5), stroke: (thickness: 1.5pt))
+      bezier((1.5, 7), (8, 1.5), (2.5, 2.5), stroke: (thickness: 1.5pt))
+      bezier((2.5, 8), (9, 2.5), (3.5, 3.5), stroke: (thickness: 1.5pt))
+
+      content((0.5, 6.4), [$U_1$])
+      content((1.5, 7.4), [$U_2$])
+      content((2.5, 8.4), [$U_3$])
+
+      line((1.08, 0), (1.08, 4.34), stroke: (dash: "dashed", thickness: 0.75pt))
+      line((0, 4.34), (1.08, 4.34), stroke: (dash: "dashed", thickness: 0.75pt))
+      circle((1.08, 4.34), radius: 0.08, fill: black)
+      content((1.08, -0.4), [$X_1$])
+      content((-0.4, 4.34), [$Y_1$])
+
+      line((2.63, 0), (2.63, 2.38), stroke: (dash: "dashed", thickness: 0.75pt))
+      line((0, 2.38), (2.63, 2.38), stroke: (dash: "dashed", thickness: 0.75pt))
+      circle((2.63, 2.38), radius: 0.08, fill: black)
+      content((2.63, -0.4), [$X_2$])
+      content((-0.4, 2.38), [$Y_2$])
+
+      line((4.98, 0), (4.98, 1.04), stroke: (dash: "dashed", thickness: 0.75pt))
+      line((0, 1.04), (4.98, 1.04), stroke: (dash: "dashed", thickness: 0.75pt))
+      circle((4.98, 1.04), radius: 0.08, fill: black)
+      content((4.98, -0.4), [$X_3$])
+      content((-0.4, 1.04), [$Y_3$])
+      
+      content((5, 7.5), text(red)[$"TU" = "const"$])
+    })
+  ]
+)
+
+#line(length: 100%, stroke: 0.25pt)
+
+#align(center)[*Krańcowa stopa substytucji* _(MRS)_]
+
+#info(title: "Nie rozumiem")[Ja tego nie rozumiem, ktoś wytłumaczy?]
+
+#grid(
+  columns: (1fr, 1.2fr),
+  gutter: 2em,
+  [
+    #set align(center)
+
+    #cetz.canvas({
+      import cetz.draw: *
+
+      line((0, 0), (6, 0), mark: (end: ">"), stroke: 1pt)
+      line((0, 0), (0, 5), mark: (end: ">"), stroke: 1pt)
+      
+      content((-0.2, -0.2), [0])
+      content((5.8, -0.4), [dobro X])
+      content((0, 5.3), [dobro Y])
+
+      bezier((0.5, 4.5), (5, 0.8), (1.2, 1.2), stroke: (thickness: 1.5pt))
+
+      line((0.7, 3.2), (3.2, 0.7), stroke: 1pt) // Przeciwprostokątna (styczna)
+      line((0.7, 3.2), (0.7, 0.7), stroke: 0.5pt) // Pionowa przyprostokątna
+      line((0.7, 0.7), (3.2, 0.7), stroke: 0.5pt) // Pozioma przyprostokątna
+
+      circle((1.8, 2.1), radius: 0.08, fill: white, stroke: black)
+      content((2.5, 2.5), [E])
+
+      content((0.7, 2.2), [$Delta Y$])
+      content((2.2, 0.8), [$Delta X$])
+    })
+  ],
+  [
+    $ "TU" = "const." $
+    $ - Delta Y * "MU"_Y = Delta X * "MU"_X $
+    $ "MRS" = (Delta Y) / (Delta X) = - "MU"_X / "MU"_Y $
+    
+    - Ilość jednego dobra zastępowanego jednostką drugiego dobra, gdy zmieniają się ich proporcje ilościowe, ale poziom satysfakcji całkowitej nie zmienia się. Konsument pozostaje na tej samej krzywej obojętności.
+    
+    - Ilość dobra Y, o którą należy zmniejszyć konsumpcję przy wzroście konsumpcji dobra X o jedną jednostkę tak, aby całkowita użyteczność pozostała na niezmienionym poziomie.
+  ]
+)
+
+#align(center)[*Prawo malejącej krańcowej stopy substytucji* _(MRS)_]
+
+#grid(
+  columns: (1fr, 1.2fr),
+  gutter: 2em,
+  [
+    #set align(center)
+    #cetz.canvas({
+      import cetz.draw: *
+      line((0, 0), (7, 0), mark: (end: ">"), stroke: 1pt)
+      line((0, 0), (0, 6), mark: (end: ">"), stroke: 1pt)
+      content((-0.2, -0.2), [0])
+      content((6.8, -0.4), [dobro X])
+      content((0, 6.3), [dobro Y])
+
+      bezier((0.5, 5.5), (6, 0.5), (1.2, 1.2), stroke: (thickness: 1.5pt))
+
+      let draw-exchange(x1, y1, x2, y2, label-y, label-x, dot: false, point-name: "") = {
+        line((x1, y1), (x2, y2), stroke: 1pt)
+        line((x1, y1), (x1, y2), stroke: 0.5pt)
+        line((x1, y2), (x2, y2), stroke: 0.5pt)
+        
+        content((x1 - 0, (y1 + y2)/2), label-y)
+        content(((x1 + x2)/2, y2 - 0.3), label-x)
+
+        if dot {
+          circle(((x1 + x2)/2, (y1 + y2)/2), radius: 0.08, fill: white, stroke: black)
+          if point-name != "" {
+            content(((x1 + x2)/2 + 0.3, (y1 + y2)/2 + 0.3), point-name)
+          }
+        }
+      }
+      draw-exchange(0.7, 4.3, 1.8, 2.3, [$Delta Y$], [$Delta X$])
+      draw-exchange(1.8, 2.4, 3, 1.4, [$Delta Y$], [$Delta X$], dot: true, point-name: [E])
+      draw-exchange(3.2, 1.4, 4.4, 0.8, [$Delta Y$], [$Delta X$])
+      line((1, 0.8), (2, -1.2), mark: (start: ">"), stroke: (paint: red, thickness: 0.5pt))
+      content((3.5, -1.2), text(red)[$Delta X$ jest stałe, ale $Delta Y$ staje się coraz krótsze!])
+    })
+  ],
+  [
+    - *Krok w prawo ($Delta X$):* Zawsze dodajemy sobie *dokładnie jedną* sztukę dobra X (szerokość schodków na dole jest cały czas taka sama).
+    - *Krok w dół ($Delta Y$):* Pokazuje, ile dobra Y poświęciliśmy. Zobacz, co się dzieje z wysokością tych trójkątów:
+      1. *Na samej górze* masz bardzo mało X, więc żeby je zdobyć, oddasz bardzo dużo Y (wysoki trójkąt).
+      2. *W środku (punkt E)* masz już więcej X, więc za kolejną sztukę oddasz już nieco mniej Y.
+      3. *Na samym dole* masz już tak dużo X, że Ci na nim nie zależy. Oddasz za niego tylko odrobinę Y (płaski trójkąt).
+      
+    - Krzywa *musi być wypukła*, aby to wszystko działało. Oznacza to po prostu, że wykres na początku ostro leci w dół, a z czasem "hamuje" i robi się płaski. To jest właśnie ten słynny spadający wskaźnik *MRS*.
+  ]
+)
+
+#v(1em)
+
+
+#grid(
+  columns: (1.2fr, 1fr),
+  gutter: 2em,
+  [
+    *Równowaga konsumenta* to połączenie pragnień (krzywe obojętności) z rzeczywistymi możliwościami (linia budżetowa), aby znaleźć *idealny zestaw zakupowy*.
+    - *Zielona linia (budżet):* To granica portfela. Wszystko na niej i pod nią to koszyki, które są w zasięgu budżetu. Zakupy powyżej zielonej linii są po prostu za drogie.
+    - *Krzywe $U_1, U_2, U_3$:* To poziomy zadowolenia. $U_3$ byłoby lepsze, ale budżet na to nie pozwala.
+
+    $X_"opt"$ oraz $Y_"opt"$ oznacza najwyższą krzywą na jaką pozwala linia budżetu. Na wykresie jest wyjątkowa sytuacja,
+    w której linia budżetowa i krzywa obojętności mają dokładnie takie samo nachylenie. Oznacza, że
+    krańcowa stopa substytucji (MRS) zrównała się z tym jak wycniea je rynek. Nie opłaca się już nic zmieniać.
+  ],
+  [
+    #set align(center)
+    #cetz.canvas({
+      import cetz.draw: *
+
+      line((0, 0), (7, 0), mark: (end: ">"), stroke: 1.2pt)
+      line((0, 0), (0, 7), mark: (end: ">"), stroke: 1.2pt)
+
+      content((7.2, -0.3), [$X$])
+      content((-0.3, 7.2), [$Y$])
+
+      line((0, 6), (6, 0), stroke: (paint: green.darken(10%), thickness: 2.5pt))
+
+      bezier((0.5, 4.5), (4.5, 0.5), (1, 1), stroke: 1.5pt)
+      bezier((0.5, 7.5), (7.5, 0.5), (2, 2), stroke: 1.5pt)
+      bezier((2.5, 7.5), (8, 2), (3.5, 3.5), stroke: 1.5pt)
+
+      content((0.5, 4.9), [$U_1$])
+      content((0.6, 7.9), [$U_2$])
+      content((2.5, 7.9), [$U_3$])
+
+      line((3, 0), (3, 3), stroke: (dash: "dashed", thickness: 0.75pt))
+      line((0, 3), (3, 3), stroke: (dash: "dashed", thickness: 0.75pt))
+
+      content((3, -0.5), [$X_"opt"$])
+      content((-0.6, 3), [$Y_"opt"$])
+
+      circle((3, -0.5), radius: 0.5, stroke: red)
+      circle((-0.6, 3), radius: 0.5, stroke: red)
+    })
+  ]
+)
+
+Konsekwencje zmiany ceny:
+- Efekt substytucyjny - dostosowanie popytu do zmiany relacji cen (konsumenci odchodzą od dobra, którego cena wzrosła zastępując je substytutami)
+- Efekt dochodowy wzrostu ceny, to po prostu możliwość kupienia mniejszej ilości danego dobra jeśli wzrośnie jego cena
+- Wzrost ceny dobra obrazujemy nowym punktem równowagi konsumenta
+
+#warning(title: "Przerób przykłady!")[Na ostatnich slajdach 2 wykładu znajdują się przykłady. Zrozum je.]
