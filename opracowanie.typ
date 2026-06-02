@@ -761,3 +761,263 @@ Konsekwencje zmiany ceny:
 - Wzrost ceny dobra obrazujemy nowym punktem równowagi konsumenta
 
 #warning(title: "Przerób przykłady!")[Na ostatnich slajdach 2 wykładu znajdują się przykłady. Zrozum je.]
+
+#block(breakable: false)[
+= Rynek
+
+Rynek to:
+- ogół warunków ekonomicznych, w którym dochodzi do zawierania transakcji wymiennych między sprzedawcami
+  oferującymi towary i usługi, a nabywcami reprezentującymi potrzeby poparte określonymi funduszami.
+- proces, w którym nabywcy i sprzedawcy określają przedmiot obrotu i warunki tego obrotu, a więc
+  decydują o cenach i ilościach oraz o pozostałych waryunkach (np. termin dostawy, sposób płatności)
+- grupa nabywców i sprzedawców danego dobra
+]
+
+== Systemy społeczno-gospodarcze
+
+
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  gutter: 1em,
+  [
+    *Gospodarka rynkowa*:
+    - wyłączność własności prywatnej
+    - wyłączny wpływ na alokację zasobów mają indywidualny decyzje konsumentów i firm, a nie
+      decyzje administracyjne czy wynikające z tradycji
+  ],
+  [
+    *Gospodarka centralnie planowana*:
+    - dominacja państwowej własności czynników produkcji
+    - nierynkowa alokacja zasobów gospodarczych
+  ],
+  [
+    *Gospodarka mieszana*:
+    - dominacja własności prywatnej
+    - decydujący wpływ na alokację zasobów mają indywidualne decyzje konsumentów i firm, a nie
+      decyzje administracyjne czy wynikające z tradycji
+  ]
+)
+
+#align(center)[
+  #cetz.canvas({
+    import cetz.draw: *
+
+    let blue-fill = rgb("5a8bc6")
+    let green-fill = rgb("d5ebd1")
+    let text-size = 10pt
+    let node-text-size = 10pt
+
+    rect((-8, -1), (-4, 1), fill: blue-fill, radius: 0.3, stroke: 1pt + black, name: "przeds")
+    content("przeds.center", text(size: node-text-size)[Przedsiębiorstwa])
+
+    rect((4, -1), (8, 1), fill: blue-fill, radius: 0.3, stroke: 1pt + black, name: "gosp")
+    content("gosp.center", text(size: node-text-size)[Gosp. domowe])
+
+    circle((0, 5), radius: (2, 1), fill: green-fill, stroke: 1pt + black, name: "rynek_dobr")
+    content("rynek_dobr.center", text(size: node-text-size, align(center)[Rynek dóbr \ i usług]))
+
+    circle((0, -5), radius: (2, 1), fill: green-fill, stroke: 1pt + black, name: "rynek_czyn")
+    content("rynek_czyn.center", text(size: node-text-size, align(center)[Rynek \ czynników \ produkcji]))
+
+    let red-style = (stroke: 1.5pt + red, mark: (end: "stealth", fill: red, scale: 1.2))
+    let blue-style = (stroke: 1.5pt + rgb("0055a4"), mark: (end: "stealth", fill: rgb("0055a4"), scale: 1.2))
+
+    bezier((-7.5, 1), (-1.95, 5.2), (-8.5, 3.5), (-4, 6.5), ..blue-style)
+    content((-6, 5.5), text(size: text-size, align(center)[Strumień dóbr \ konsumpcyjnych]))
+
+    bezier((1.95, 5.2), (7.5, 1), (4, 6.5), (8.5, 3.5), ..blue-style)
+    content((6, 5.5), text(size: text-size, align(center)[Strumień \ zakupionych dóbr \ konsumpcyjnych]))
+
+    bezier((7.5, -1), (1.95, -5.2), (8.5, -3.5), (4, -6.5), ..blue-style)
+    content((6, -5.75), text(size: text-size, align(center)[Strumień czynników \ produkcji]))
+
+    bezier((-1.95, -5.2), (-7.5, -1), (-4, -6.5), (-8.5, -3.5), ..blue-style)
+    content((-6, -5.5), text(size: text-size, align(center)[Strumień czynników \ produkcji]))
+
+    bezier((-1.5, 4.3), (-4.5, 1), (-2.5, 2.5), (-3.5, 1.5), ..red-style)
+    content((-3.5, 2.8), text(size: text-size, align(center)[Strumień \ przychodów \ producentów dóbr \ i usług]))
+
+    bezier((4.5, 1), (1.5, 4.3), (3.5, 1.5), (2.5, 2.5), ..red-style)
+    content((3.5, 2.8), text(size: text-size, align(center)[Strumień wydatków \ konsumpcyjnych]))
+
+    bezier((1.5, -4.3), (4.5, -1), (2.5, -2.5), (3.5, -1.5), ..red-style)
+    content((3.5, -2.8), text(size: text-size, align(center)[Strumień wynagrodzeń \ czynników \ produkcyjnych]))
+
+    bezier((-4.5, -1), (-1.5, -4.3), (-3.5, -1.5), (-2.5, -2.5), ..red-style)
+    content((-3.5, -2.8), text(size: text-size, align(center)[Strumień kosztów \ wynajęcia czynników \ produkcyjnych]))
+  })
+]
+
+*Rynek jako podstawowy, mechanizm rozwiązywania trzech kluczowych problemów każdej gospodarki*:
+
+- Co produkować:
+  - zachowania i potrzeby konsumentów
+  - "głosowanie" pieniędzmi
+  - w ramach możliwości produkcyjnych gospodarki
+- Jak produkować:
+  - ograniczenia gospodarki
+  - efektywna konkurencja między producentami
+  - produkować dużo, sprzedawać tanio - eliminacja drogich metod produkcji
+- Dla kogo produkować:
+  - problem rozwiązywany dzięki kształtowaniu się relacji popytu i podaży na rynkach
+
+#grid(
+  columns: (1fr, 0pt, 1fr),
+  gutter: 2em,
+  grid.vline(x: 1, stroke: 0.25pt),
+  [
+    Kryteria podziału rynków:
+
+    - według przedmiotu obrotu
+    - według zasięgu geograficznego
+    - w zależności od sytuacji rynkowej (rynek sprzedawcy, rynek nabywcy)
+    - w zależności od stopnia jednorodności przedmiotu transakcji (rynek homogeniczny, heterogeniczny)
+    - w zależności od struktury rynku (rynek konkurencji doskonałej i niedoskonałej)
+  ], [], [
+    Typowe formy zorganizowania rynków:
+
+    - Konkurencja doskonała: ziemniaki
+    - Konkurencja monopolistyczna: jeansy
+    - Oligopol: telefon
+    - Monopol: pieniądze
+    - Monopson: siły zbrojne
+  ]
+)
+
+#align(center)[
+  #table(
+    columns: (auto, auto, auto, auto, auto),
+    align: (left, center),
+    fill: (x, y) => if y == 0 { luma(240) },
+     
+    [*Cecha*], [*Konkurencja \ doskonała*], [*Konkurencja \ monopolistyczna*], [*Oligopol*], [*Monopol pełny*],
+    [Liczba producentów], [bardzo dużo], [wiele], [kilka lub kilkanaście], [jedna],
+    [Rodzaj produktu], [jednorodny\ (standardowy)], [zróżnicowany], [standardowy lub zróżnicowany], [unikatowy (brak bliskich substytutów)],
+    [Kontrola nad ceną], [żadna], [w wąskim zakresie], [znaczna (zmowa) lub ograniczona (wzajemna współzależność)], [znaczna],
+    [Warunki wejścia na rynek], [bardzo łatwe], [względnie łatwe], [poważne przeszkody], [bardzo trudne],
+    [Konkurencja pozacenowa], [żadna], [znaczny nacisk na reklamę, nazwę, \ znak firmowy], [znaczna, związana ze zróżnicowaniem produktu], [reklama],
+    [Przykład], [rolnictwo, giełdy], [handel detaliczny], [prod. samochodów, operatorzy telefonii], [sieć wodociągowa, energetyczna]
+  )
+]
+
+Kartel - grupa przedsiębiorstw działających wspólnie, w zgodzie, zachowujące się jak monopolista.
+
+== Mechanizm rynkowy
+
+Czyli mechanizm popytowo-podażowo-cenowy.
+
+/ Popyt: zgłaszany przez kupujących.
+/ Podaż: zgłaszana przez sprzedających, ekonomicznie uzasadniona oferta rynkowa sprzedaży określonego dobra lub usługi.
+/ Cena: wyrażona w jednostkach pieniężnych wartość rynkowa jednostki towaru.
+
+== Popyt
+
+Pojęcie popytu:
+- *popyt potencjalny* (zapotrzebowanie) - potrzeby, życzenia marzenia, nie poparte możliwościami dochodowymi
+- *popyt efektywny* - zgłaszane zapotrzebowanie poparte możliwościami nabywczymi (PLN, EUR)
+  - ekonomicznie uzasadnione zapotrzebowanie na określone dobra ekonomiczne (dobra konsumpcyjne), czynniki produkcji oraz środki majątkowo-finansowe
+  - jest to ilość dobra, jaką nabywcy *są gotowi* (zapotrzebowanie) i *są w stanie* (PLN) nabyć w określonym czasie przy danym poziomie ceny
+- *popyt rynkowy* - suma popytu zgłaszanego przez indywidualnych nabywców
+
+
+#align(center)[
+#block(breakable: false)[
+
+  *Funkcja popytu*
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2em,
+  [
+  #cetz.canvas({
+    import cetz.draw: *
+    
+    line((0,0), (0, 6), mark: (end: "stealth", fill: black))
+    line((0,0), (8, 0), mark: (end: "stealth", fill: black))
+    
+    content((0, 6.25), [Cena (p)])
+    content((8.75, 0), [Ilość (Q)])
+    
+    bezier((0.8, 5.5), (7.5, 1), (1.2, 1.5), (4, 1), stroke: 1pt + black)
+    
+    line((4, 0), (4, 1.35), stroke: (dash: "dotted", thickness: 0.8pt))
+    line((0, 1.35), (4, 1.35), stroke: (dash: "dotted", thickness: 0.8pt))
+    
+    line((1.5, 0), (1.5, 3.15), stroke: (dash: "dotted", thickness: 0.8pt))
+    line((0, 3.15), (1.5, 3.15), stroke: (dash: "dotted", thickness: 0.8pt))
+    
+    circle((4, 1.35), radius: 0.08, fill: red, stroke: none)
+    circle((1.5, 3.15), radius: 0.08, fill: red, stroke: none)
+    
+    content((-0.5, 1.35), [pd1])
+    content((-0.5, 3.15), [pd2])
+    content((4, -0.4), [qd1])
+    content((1.5, -0.4), [qd2])
+    
+    content((6.6, 1.5), [#align(center)[(popyt)\ *D*]])
+  })
+  ], [
+    #v(5em)
+    Wraz ze wzrostem ceny maleje ilość dobra, którą konsumenci są skłonni i są w stanie nabyć przy danym poziomie ceny,
+    przy założeniu, że pozostałe warunki nie uległy zmianie (ceteris paribus) i odwrotnie.
+  ])
+]
+]
+
+
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  gutter: 1.5em,
+  align: top + center,
+  [
+    #cetz.canvas({
+      import cetz.draw: *
+      
+      line((0,0), (0, 5), mark: (end: "stealth", fill: black))
+      line((0,0), (5, 0), mark: (end: "stealth", fill: black))
+      
+      content((-0.3, 4.8), [P])
+      content((4.8, -0.6), [Q])
+      
+      line((1.5, 0), (1.5, 5))
+      content((2.2, 4.5), text(size: 16pt)[D])
+    })
+    
+    #text(weight: "bold")[Popyt doskonale \ nieelastyczny- sztywny -] \ 
+    niezbędne potrzeby, brak \ substytutów
+  ],
+  [
+    #cetz.canvas({
+      import cetz.draw: *
+      
+      line((0,0), (0, 5), mark: (end: "stealth", fill: black))
+      line((0,0), (5, 0), mark: (end: "stealth", fill: black))
+      
+      content((-0.3, 4.8), [P])
+      content((4.8, -0.6), [Q])
+      
+      line((0, 2.5), (4, 2.5))
+      content((4.4, 2.8), text(size: 16pt)[D])
+    })
+    
+    #text(weight: "bold")[Popyt doskonale \ elastyczny –] \ 
+    teoretyczna sytuacja w \ konkurencji doskonałej
+  ],
+  [
+    #cetz.canvas({
+      import cetz.draw: *
+      
+      line((0,0), (0, 5), mark: (end: "stealth", fill: black))
+      line((0,0), (5, 0), mark: (end: "stealth", fill: black))
+      
+      content((-0.3, 4.8), [P])
+      content((4.8, -0.6), [Q])
+      
+      bezier((1, 0.7), (4.2, 4.5), (3, 0.9), (3.8, 2.5))
+      content((3.5, 4.2), text(size: 16pt)[D])
+    })
+    
+    #text(weight: "bold")[Popyt wynikający z tzw. efektów \ zewnętrznych:] \ 
+    - efekt Veblena (efekt demonstracji, \ efekt prestiżowy) \ 
+    - paradoks spekulacyjny
+  ]
+)
