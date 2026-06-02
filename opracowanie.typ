@@ -73,7 +73,7 @@ To jest opracowanie wszystkich wykładów, starając się zrozumieć o co chodzi
   #table(
     columns: (auto, auto),
     align: (left, center),
-    fill: (x, y) => if y == 0 { luma(240) }, // Jasnoszare tło dla pierwszego rzędu (nagłówka)
+    fill: (x, y) => if y == 0 { luma(240) },
     
     [*Czynnik produkcji*], [*Kluczowe zasoby*],
     
@@ -483,7 +483,7 @@ W tabeli wyglądałoby to tak:
     #table(
       columns: (auto, auto, auto),
       align: (left, center),
-      fill: (x, y) => if y == 0 { luma(240) }, // Jasnoszare tło dla pierwszego rzędu (nagłówka)
+      fill: (x, y) => if y == 0 { luma(240) },
     
       [*$X$*], [*$M\U(X)$*], [*$T\U(X)$*],
     
@@ -503,3 +503,26 @@ w przeliczeniu na jednostkę pieniężną z każdego zakupionego dobra. $(M\U(X)
 ilość, ponieważ szukamy sytuacji, gdzie każda wydana złotówka na dobro X da taką samą satysfakcję jak każda złotówka
 wydana na dobro Y - czyli ilość jest "schowana" za $M\U$.
 
+=== Przykład dla dwóch dóbr
+
+Czerwone, to miejsca niewypełnione.
+
+#align(center)[
+W tabeli wyglądałoby to tak:
+  #block(breakable: false)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (left, center),
+      fill: (x, y) => if y == 0 { luma(240) },
+    
+      [X], [TU(X)], [MU(X)], [MU(X)/P(X)], [Y], [TU(Y)], [MU(Y)], [MU(Y)/P(Y)],
+    
+      [1], [24], text(fill: red)[-], text(fill: red)[-], [1], text(fill: red)[-], [12], text(fill: red)[-],
+      [2], text(fill: red)[-], [20], text(fill: red)[-], [2], text(fill: red)[-], text(fill: red)[-], text(fill: red)[-],
+      [3], [60], text(fill: red)[-], text(fill: red)[-], [3], [30], text(fill: red)[-], text(fill: red)[-],
+      [4], [74], text(fill: red)[-], text(fill: red)[-], [4], [36], [6], text(fill: red)[-],
+      [5], text(fill: red)[-], [10], text(fill: red)[-], [5], [40], text(fill: red)[-], text(fill: red)[-],
+      [6], [92], text(fill: red)[-], text(fill: red)[-], [6], [42], [2], text(fill: red)[-]
+    )
+  ]
+]
