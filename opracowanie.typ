@@ -1891,14 +1891,13 @@ Wywnioskować można, że:
 - $e_"pd"<1$, to wzrost ceny (p) prowadzi do wzrostu TR (i odwrotnie)
 - $e_"pd"=1$, to zmiana ceny nie wpływa na zmianę TR.
 
-== Elastyczność podaży
+== Elastyczność cenowa podaży
 
 Elastyczność cenowa podaży ($E_"PS"$) jest stosunkiem względnej zmiany podaży.
 
 $
   E_("PS") = (Delta Q : Q_0" => skutek")/(Delta p : p_0" => przyczyna") = "% zmiana wielkości podaży"/ "% zmiany ceny"
 $
-
 #align(center, cetz.canvas(length: 1cm, {
   import cetz.draw: *
 
@@ -1924,3 +1923,338 @@ $
   content((-0.5, 6.25), [$p_1$])
   content((-0.5, 5), [$Delta p$])
 }))
+
+#block(breakable: false)[
+#align(center)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+      Elastyczność cenowa podaży:
+      - określa intensywność reakcji producentów/sprzedawców na zmianę ceny oferowanego dobra
+      - jest dodatnia - zgodność kierunków zmian ceny i wielkości podaży
+    ],
+    [
+      Interpretacja elastyczności cenowej podaży:
+
+      Ze wzrostem ceny o 1%, ilość dobra oferowanego (wielkość podaży) wzrasta o $E_"PS"%$ ceteris paribus.
+
+      - $E_"PS" = 0$ - podaż sztywna
+      - $0 < E_"PS" < 1$ - podaż nieelastyczna
+      - $E_"PS" = 1$ - podaż neutralna
+      - $1 < E_"PS" < infinity$ - podaż elastyczna
+      - $E_"PS" = infinity$ - podaż doskonale elastyczna
+    ]
+)
+]]
+
+Elastyczność cenowa podaży zależy od *czasu* i *kosztów produkcji*.
+
+#warning(title: "Tutaj pojawia się przykład")[Sprawdź slajdy i zrozum przykład elastyczności cenowej podaży.]
+
+== Wrażliwość konsument ów na zmianę czynników pozacenowych
+
+Dobra substytucyjne - dobra zastępowalne w procesie konsumpcji i produkcji.
+
+(ceteris paribus) Wzrost ceny danego dobra lub usługi prowadzi do spadku popytu na dane dobreo
+i jednoczesnego wzrostu popytu na dobra lub usługi *substytucyjne*.
+
+#align(center)[
+  *Wpływ wzrostu ceny dobra G*
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 1em,
+    
+    align(center)[
+      na wielkość \ popytu na dobro $G$ \
+      #v(2em)
+      #cetz.canvas(length: 0.9cm, {
+        import cetz.draw: *
+        
+        line((0, -0.2), (0, 4.5), mark: (end: ">", fill: black))
+        line((-0.2, 0), (4.5, 0), mark: (end: ">", fill: black))
+        content((0, 4.8), [$p_g$])
+        content((4.8, 0), [$g$], anchor: "west")
+
+        line((0.3, 4.2), (4.2, 0.3), stroke: red + 1pt)
+        content((4.3, 0.4), text(fill: red)[$D_G$], anchor: "west")
+
+        line((0, 1), (4.2, 1), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((0, 3.2), (4.2, 3.2), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((1.3, 0), (1.3, 3.2), stroke: (dash: "dotted", paint: red, thickness: 0.8pt))
+        line((3.5, 0), (3.5, 1), stroke: (dash: "dotted", paint: red, thickness: 0.8pt))
+
+        circle((3.5, 1), radius: 0.08, fill: white, stroke: black)
+        circle((1.3, 3.2), radius: 0.08, fill: white, stroke: black)
+
+        line((0.2, 1.2), (0.2, 3), mark: (end: ">", fill: red), stroke: red + 0.8pt)
+        line((3.3, 0.2), (1.5, 0.2), mark: (end: ">", fill: red), stroke: red + 0.8pt)
+
+        content((-0.4, 1), [$p_"g0"$])
+        content((-0.4, 3.2), [$p_"g1"$])
+        content((3.5, -0.4), [$g_0$])
+        content((1.3, -0.4), [$g_1$])
+      })
+    ],
+
+    align(center)[
+      na wielkość \ popytu na dobro \ substytucyjne $S$ \
+      #v(1em)
+      #cetz.canvas(length: 0.9cm, {
+        import cetz.draw: *
+        
+        line((0, -0.2), (0, 4.5), mark: (end: ">", fill: black))
+        line((-0.2, 0), (4.5, 0), mark: (end: ">", fill: black))
+        content((0, 4.8), [$p_s$])
+        content((4.8, 0), [$s$], anchor: "west")
+
+        line((0.6, 0.1), (3.8, 3.6), stroke: blue + 1pt)
+
+        line((0, 1), (4.2, 1), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((0, 3.2), (4.2, 3.2), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((1.4, 0), (1.4, 1), stroke: (dash: "dotted", paint: blue, thickness: 0.8pt))
+        line((3.4, 0), (3.4, 3.2), stroke: (dash: "dotted", paint: blue, thickness: 0.8pt))
+
+        circle((1.4, 1), radius: 0.08, fill: white, stroke: black)
+        circle((3.4, 3.2), radius: 0.08, fill: white, stroke: black)
+
+        line((0.2, 1.2), (0.2, 3), mark: (end: ">", fill: red), stroke: red + 0.8pt)
+        line((1.6, 0.2), (3.2, 0.2), mark: (end: ">", fill: blue), stroke: blue + 0.8pt)
+
+        content((1.4, -0.4), [$s_0$])
+        content((3.4, -0.4), [$s_1$])
+      })
+    ],
+
+    align(center)[
+      na zmianę \ położenia \ cenowej krzywej \ popytu dobra $S$ \
+      #cetz.canvas(length: 0.9cm, {
+        import cetz.draw: *
+        
+        line((0, -0.2), (0, 4.5), mark: (end: ">", fill: black))
+        line((-0.2, 0), (4.5, 0), mark: (end: ">", fill: black))
+        content((0, 4.8), [$p_s$])
+        content((4.8, 0), [$s$], anchor: "west")
+
+        line((0.5, 4), (2.4, 0.2), stroke: blue + 1pt)
+        content((2.5, 0.5), text(fill: blue)[$D_"S0"$], anchor: "west")
+        
+        line((2.5, 4), (4.4, 0.2), stroke: blue + 1pt)
+        content((4.5, 0.5), text(fill: blue)[$D_"S1"$], anchor: "west")
+
+        line((0, 2), (4.5, 2), stroke: (dash: "dashed", paint: blue, thickness: 0.5pt))
+        
+        line((1.5, 0), (1.5, 4.2), stroke: (dash: "dotted", paint: blue, thickness: 0.8pt))
+        line((3.5, 0), (3.5, 4.2), stroke: (dash: "dotted", paint: blue, thickness: 0.8pt))
+
+        circle((1.5, 2), radius: 0.08, fill: white, stroke: black)
+        circle((3.5, 2), radius: 0.08, fill: white, stroke: black)
+
+        line((1.1, 2.8), (2.9, 2.8), mark: (end: ">", fill: blue), stroke: blue + 0.8pt)
+        line((2.1, 0.8), (3.9, 0.8), mark: (end: ">", fill: blue), stroke: blue + 0.8pt)
+
+        content((-0.4, 2), [$p_"s0"$])
+        content((1.5, -0.4), [$s_0$])
+        content((3.5, -0.4), [$s_1$])
+      })
+    ]
+  )
+]
+
+== Wrażliwość konsumentów na zmianę czynników pozacenowych
+
+*Dobro komplementarne* to takie których spożycie lub produkcja odbywa się łącznie.
+W konsekwencji jeśli popyt z jednego z tych dóbr spada, to i drugiego też.
+
+#block(breakable:false)[
+#align(center)[
+  *Wpływ wzrostu ceny dobra G*
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 1em,
+    
+    align(center)[
+      na wielkość \ popytu na dobro $G$ \
+      #v(2em)
+      #cetz.canvas(length: 0.9cm, {
+        import cetz.draw: *
+        
+        line((0, -0.2), (0, 4.5), mark: (end: ">", fill: black))
+        line((-0.2, 0), (4.5, 0), mark: (end: ">", fill: black))
+        content((0, 4.8), [$p_g$])
+        content((4.8, 0), [$g$], anchor: "west")
+
+        line((0.3, 4.2), (4.2, 0.3), stroke: red + 1pt)
+        content((4.3, 0.4), text(fill: red)[$D_G$], anchor: "west")
+
+        line((0, 1), (4.2, 1), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((0, 3.2), (4.2, 3.2), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((1.3, 0), (1.3, 3.2), stroke: (dash: "dotted", paint: red, thickness: 0.8pt))
+        line((3.5, 0), (3.5, 1), stroke: (dash: "dotted", paint: red, thickness: 0.8pt))
+
+        circle((3.5, 1), radius: 0.08, fill: white, stroke: black)
+        circle((1.3, 3.2), radius: 0.08, fill: white, stroke: black)
+
+        line((0.2, 1.2), (0.2, 3), mark: (end: ">", fill: red), stroke: red + 0.8pt)
+        line((3.3, 0.2), (1.5, 0.2), mark: (end: ">", fill: red), stroke: red + 0.8pt)
+
+        content((-0.4, 1), [$p_"g0"$])
+        content((-0.4, 3.2), [$p_"g1"$])
+        content((3.5, -0.4), [$g_0$])
+        content((1.3, -0.4), [$g_1$])
+      })
+    ],
+
+    align(center)[
+      na wielkość popytu \ na dobro \ komplementarne $K$ \
+      #v(1em)
+      #cetz.canvas(length: 0.9cm, {
+        import cetz.draw: *
+        
+        line((0, -0.2), (0, 4.5), mark: (end: ">", fill: black))
+        line((-0.2, 0), (4.5, 0), mark: (end: ">", fill: black))
+        content((0, 4.8), [$p_k$])
+        content((4.8, 0), [$k$], anchor: "west")
+
+        line((0.7, 3.8), (4.1, 0.4), stroke: green + 1pt)
+
+        line((0, 1), (4.2, 1), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((0, 3.2), (4.2, 3.2), stroke: (dash: "dashed", paint: red, thickness: 0.5pt))
+        line((1.3, 0), (1.3, 3.2), stroke: (dash: "dotted", paint: green, thickness: 0.8pt))
+        line((3.5, 0), (3.5, 1), stroke: (dash: "dotted", paint: green, thickness: 0.8pt))
+
+        circle((1.3, 3.2), radius: 0.08, fill: white, stroke: black)
+        circle((3.5, 1), radius: 0.08, fill: white, stroke: black)
+
+        line((0.2, 1.2), (0.2, 3), mark: (end: ">", fill: red), stroke: red + 0.8pt)
+        line((3.3, 0.2), (1.5, 0.2), mark: (end: ">", fill: green), stroke: green + 0.8pt)
+
+        content((1.3, -0.4), [$k_1$])
+        content((3.5, -0.4), [$k_0$])
+      })
+    ],
+
+    align(center)[
+      na zmianę \ położenia \ cenowej krzywej \ popytu dobra K \
+      #cetz.canvas(length: 0.9cm, {
+        import cetz.draw: *
+        
+        line((0, -0.2), (0, 4.5), mark: (end: ">", fill: black))
+        line((-0.2, 0), (4.5, 0), mark: (end: ">", fill: black))
+        content((0, 4.8), [$p_k$])
+        content((4.8, 0), [$k$], anchor: "west")
+
+        line((0.3, 4), (2.2, 0.2), stroke: green + 1pt)
+        content((2.3, 0.5), text(fill: green)[$D_"K1"$], anchor: "west")
+        
+        line((2.5, 4), (4.4, 0.2), stroke: green + 1pt)
+        content((4.5, 0.5), text(fill: green)[$D_"K0"$], anchor: "west")
+
+        line((0, 2), (4.5, 2), stroke: (dash: "dashed", paint: green, thickness: 0.5pt))
+        
+        line((1.3, 0), (1.3, 4.2), stroke: (dash: "dotted", paint: green, thickness: 0.8pt))
+        line((3.5, 0), (3.5, 4.2), stroke: (dash: "dotted", paint: green, thickness: 0.8pt))
+
+        circle((1.3, 2), radius: 0.08, fill: white, stroke: black)
+        circle((3.5, 2), radius: 0.08, fill: white, stroke: black)
+
+        line((2.9, 3), (0.9, 3), mark: (end: ">", fill: green), stroke: green + 0.8pt)
+        line((3.9, 1), (1.9, 1), mark: (end: ">", fill: green), stroke: green + 0.8pt)
+
+        content((-0.4, 2), [$p_"k0"$])
+        content((1.3, -0.4), [$k_1$])
+        content((3.5, -0.4), [$k_0$])
+      })
+    ]
+  )
+]]
+
+#block(breakable:false)[
+#align(center)[
+  *Mieszana elastyczność cenowa popytu*
+  $
+    E_"ij" = (Delta Q_i : Q_(i\0))/(Delta p_j : p_j\0)
+  $
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 1em,
+    [
+      $E_"ij" > 0$ - dobro i-te to substytucyjne względem j-tego
+    ],
+    [
+      $E_"ij" = 0$ - dobro obojętne (neutralne) względem j-tego
+    ],
+    [
+      $E_"ij" < 0$ - dobro komplementarne względem j-tego
+    ]
+  )  
+]]
+
+
+#line(length: 100%, stroke: 0.25pt)
+
+#info(title: "Nie rozumiem")[Nie rozumiem tego fragmentu]
+
+Popyt rynkowy na dowolne dobro, mierzony ilością dóbr Q może być:
+- ujemnie uzależniony od ceny tego dobra (p)
+- dodatnio uzależniony od cen dóbr substytucyjnych (ps)
+- ujemnie uzależniony od cen dóbr komplementarnych (pk)
+- niezależny od cen dóbr obojętnych (ph)
+
+Funkcję popytu uwzględniającą wyróżnione powyżej czynniki zapisujemy:
+$
+  Q = Q_D(p, p_s, p_k, ...)
+$
+
+#line(length: 100%, stroke: 0.25pt)
+
+== Elastyczność dochodowa popytu
+
+Elastyczność dochodowa popytu jest stosunkiem względnej zmiany wielkści popytu na dane dobro do względnej zmiany dochodu.
+Pozwala stwierdzić, o ile procent zmniejszy się lub zwiększy wielkość popytu, jeśli przeciętne dochody ludności wzrosną o jeden procent
+(ceteris paribus).
+
+$
+  E_M = (Delta Q : Q_0)/(Delta M : M_0)
+$
+
+*Prawo Engla* - w miarę wzrostu dochodów ludności wydatki na żywność rosną, ale udział wydatków na żywność w całości dochodów maleje.
+
+- $E_M < 0$ - dobro podstawowe niższego rzędu (dobro poślednie) - wzrost dochodu powoduje spadek popytu
+- $0 < E_M < 1$ - dobro podstawowym normalnym - wzrost dochodu o 1% zwiększa popyt na nie mniej niż 1%, nastąpi spadek udziału wydatków na to dobro w dochodzie
+- $E_M > 1$ - dobro normalne wyższego rzędu (dobro luksusowe) - wzrost dochodu o 1% zwiększa popyt o więcej niż 1%, nastąpi wzrost udziału wydatków na to dobro w dochodzie
+
+
+#block(breakable:false)[
+#align(center)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+      *Krańcowa skłonność do konsumpcji (KSK)*
+
+      o ile z każdej dodatkowej jednostki dochodu konsumenci przeznaczają na zakup dobra i-tego
+      $
+        K\S\K = (Delta R)/(Delta M)
+      $
+    ],
+    [
+      *Przeciętna skłonność do konsumpcji (PSK)*
+
+      jaką część dochodów konsumentów stanowią wydatki na dobro i-te
+      $
+        P\S\K = R/M \
+        0 < P\S\K < 1
+      $
+    ]
+    )
+  ]
+  $
+    E_M = (K\S\K)/(P\S\K)
+  $
+]
+
+- $K\S\K>P\S\K$ ($E_M>1$) - dobro wyższego rzędu
+- $0<K\S\K<P\S\K$ ($0<E_M<1$) - dobro podstawowe normalne
+- $K\S\K<0$ ($E_M<0$) - dobro podstawowe niższego rzędu
+
