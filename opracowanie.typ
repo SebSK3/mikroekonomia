@@ -2,7 +2,7 @@
 #import "@preview/mannot:0.3.3": mark, annot
 #import "@preview/cetz:0.5.2"
 
-#set document(title: "Specyfikacja wymagań systemowych", author: "Aaa")
+#set document(title: "Wprowadzenie do Mikroekonomii - opracowanie", author: "Sebastian Kwaśniak")
 #set page(paper: "a4", margin: 1.5cm, numbering: "1", footer: context [
     #set text(11pt)
     #align(center)[
@@ -1083,17 +1083,13 @@ produktu (p)
     #cetz.canvas({
       import cetz.draw: *
       
-      // Osie
       line((0,0), (0, 6.5), mark: (end: "stealth", fill: black))
       line((0,0), (8.5, 0), mark: (end: "stealth", fill: black))
       
-      // Etykiety osi
       content((-0.4, 6.3), text(size: 16pt)[P])
       content((8.3, -0.4), text(size: 16pt)[Q])
       
-      // Krzywa popytu (D) - brązowa
       bezier((0.5, 6), (7, 1.2), (1.2, 2.2), (4, 1.5), stroke: 1.5pt + rgb("994422"))
-      // Krzywa podaży (S) - niebieska
       bezier((0.5, 1.2), (6.5, 6), (5, 1.5), (6, 3), stroke: 1.5pt + blue)
       
       line((3.8, 0), (3.8, 1.8), stroke: (dash: "dotted", thickness: 0.8pt))
@@ -1122,3 +1118,99 @@ produktu (p)
     ]
   ]
 )
+
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 1em,[
+
+#align(center)[
+*Ceny administrowane - Pułap ceny*
+#scale(80%, reflow: true)[
+#cetz.canvas({
+  import cetz.draw: *
+  
+  line((0,0), (0, 6.5), mark: (end: "stealth", fill: black))
+  line((0,0), (8.5, 0), mark: (end: "stealth", fill: black))
+  
+  content((-0.4, 6.3), text(size: 16pt)[P])
+  content((8.3, -0.4), text(size: 16pt)[Q])
+  
+  bezier((0.5, 6), (7, 1.2), (1.2, 2.2), (4, 1.5), stroke: 1.5pt + rgb("994422"))
+  bezier((0.5, 1.2), (6.5, 6), (5, 1.5), (6, 3), stroke: 1.5pt + blue)
+  
+  line((3.8, 0), (3.8, 1.8), stroke: (dash: "dotted", thickness: 0.8pt))
+  line((0, 1.85), (3.8, 1.85), stroke: (dash: "dotted", thickness: 0.8pt))
+  
+  
+  content((-0.5, 2), align(center)[#text(size: 16pt)[P#sub[E]]])
+  content((3.8, -0.8), align(center)[#text(size: 16pt)[Q#sub[E]] \ ilość równowagi])
+  
+  content((3.8, 2.5), align(center)[Równowaga \ #text(size: 16pt)[E]])
+  content((7.2, 1.8), text(size: 16pt)[D])
+  content((5.8, 5.9), text(size: 16pt)[S])
+
+  content((-1.25, 1.2), [#align(center)[Pułap ceny - P#sub[1]]])
+  line((0, 1.35), (1.8, 1.35), stroke: (dash: "dotted", thickness: 0.8pt))
+
+  line((0, 1.35), (5.8, 1.35), stroke: 1.5pt + green)
+
+  line((1.85, 1.35), (1.8, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+  line((5.8, 1.35), (5.8, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+
+  content((1.8, -0.6), text(size: 16pt)[Q#sub[S1]])
+
+  content((5.8, -0.6), text(size: 16pt)[Q#sub[D1]])
+
+  content((3.8, 1.4), $underbrace(#box(width: 4cm, ""))$)
+  content((3.7, 0.5), align(center)[
+    Niedobór rynkowy \ = Q#sub[D1] - Q#sub[S1]
+  ])
+})]
+]
+], [
+
+#align(center)[
+*Ceny administrowane - Ceny minimalne*
+
+#scale(82%, reflow: true)[
+
+  #cetz.canvas({
+  import cetz.draw: *
+  
+  line((0,0), (0, 6.5), mark: (end: "stealth", fill: black))
+  line((0,0), (8.5, 0), mark: (end: "stealth", fill: black))
+  
+  content((-0.4, 6.3), text(size: 16pt)[P])
+  content((8.3, -0.4), text(size: 16pt)[Q])
+  
+  bezier((0.5, 6), (7, 1.2), (1.2, 2.2), (4, 1.5), stroke: 1.5pt + rgb("994422"))
+  bezier((0.5, 1.2), (6.5, 6), (5, 1.5), (6, 3), stroke: 1.5pt + blue)
+  
+  line((3.8, 0), (3.8, 1.85), stroke: (dash: "dotted", thickness: 0.8pt))
+  line((0, 1.85), (3.8, 1.85), stroke: (dash: "dotted", thickness: 0.8pt))
+  
+  content((3.8, 2.2), text(size: 16pt)[E])
+  content((3.8, -0.6), text(size: 16pt)[Q#sub[E]])
+  
+  content((-0.6, 1.85), text(size: 16pt)[P#sub[E]])
+  line((0, 4.2), (7, 4.2), stroke: 1.5pt + purple)
+  
+  line((1.1, 4.2), (1.1, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+  line((6, 4.2), (6, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+  
+  content((1.3, -0.6), text(size: 16pt)[Q#sub[D2]])
+  content((5.7, -0.6), text(size: 16pt)[Q#sub[S2]])
+  
+  content((-1.5, 4.2), [Cena minimalna P])
+  
+  content((3.6, 4.1), $overbrace(#box(width: 4.9cm, ""))$)
+  content((3.5, 5.0), [Nadwyżka rynkowa])
+  
+  content((7.2, 1.8), text(size: 16pt)[D])
+  content((5.8, 5.9), text(size: 16pt)[S])
+})]]
+]
+)
+
+#warning(title: "Tu pojawia się zadanie na slajdach")[Zrozum co się dzieje na wykresach, gdyby pojawiły się liczby!]
