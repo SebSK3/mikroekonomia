@@ -1288,7 +1288,10 @@ popytu lub podażu.
         line((3.3, -1.0), (1.5, -1.0), mark: (end: "stealth", fill: black), stroke: 0.8pt)
       })
     ]
-  )  
+  )
   #v(1em)
-  #text(size: 15pt)[na skutek działania determinant pozacenowych]
+  #text(size: 15pt)[na skutek działania determinant pozacenowych \ Wykresy powyżej analogiczne dla podaży.
 ]
+]
+
+= Nadwyżka konsumenta i producenta, elastyczność popytu i podaży
