@@ -1773,3 +1773,154 @@ Miarą reakcji wielkości popytu na zmieniającą się cenę jest współczynnik
 $
   E_("PD") = (Delta Q : Q_0" => skutek")/(Delta p : p_0" => przyczyna")
 $
+
+Elastyczność cenowa popytu wyraża wrażliwość konsumentów na zmianę ceny. Wskazuje, o ile procent zmniejszy się
+popyt, jeśli przy innych niezmienionych warunkach cena danego dobra wzrośnie o 1%.
+
+$
+  e_"pd"=|E_"PD"|
+$
+
+Interpretacja elastyczności: w warunkach stałości poostałych zmiennych wzrost ceny o 1% prowadzi do spadku popytu
+o $e_"pd"%$. 
+
+#grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+  [
+    Popyt *bardziej* elastyczny:
+    - dostepność substytutów
+    - dobra luksusowe
+    - rynki wąsko zdefiniowane
+    - długi czas na reakcję
+    - niskie dochody
+    - wysokie ceny
+    - wysoki udział dobra w całkowitych wydatkach
+  ], [
+    Popyt *mniej* elastyczny:
+    - mała dostępność substytutów
+    - dobra pierwszej potrzeby
+    - rynki szeroko zdefiniowane
+    - krótki czas na reakcję
+    - wysokie dochody
+    - niskie ceny
+    - niski udział dobgra w całkowitych wydatkach
+  ]
+)
+
+Rodzaje popytu:
+- Popyt elastyczny, gdy $e_"pd" > 1$ (1% zwiększenia ceny to ponad 1% spadku sprzedaży)
+- Popyt nieelastyczny, gdy $e_"pd" < 1$ (1% zwiększenia ceny to mniej niż 1% spadku sprzedaży)
+- Popyt jednostkowo elastyczny, gdy $e_"pd" = 1$ (1% zwiększenia ceny = 1% mniej sprzedaży)
+- Popyt doskonale elastyczny, gdy $e_"pd" = infinity$
+- Popyt doskonale nieelastyczny, gdy $e_"pd" = 0$
+
+Trzeba pamiętać że elastyczność cenowej liniowej funkcji popytu jest zmienna i zależy od nachylna i położenia
+badanego punktu.
+
+#align(center)[
+  #cetz.canvas({
+    import cetz.draw: *
+    
+    line((0,0), (0, 5), mark: (end: ">"))
+    content((0, 5.3), $p$)
+    
+    line((0,0), (6, 0), mark: (end: ">"))
+    content((6.3, 0), $Q$)
+    
+    let a = 5
+    let a_b = 4
+    let mid_x = a / 2
+    let mid_y = a_b / 2
+    
+    line((0, a_b), (mid_x, mid_y), stroke: (paint: blue, thickness: 1.5pt))
+    line((mid_x, mid_y), (a, 0), stroke: (paint: red, thickness: 1.5pt))
+    
+    circle((0, a_b), radius: 0.05, fill: green)
+    content((-0.5, a_b), $a/b$)
+    content((0.9, a_b + 0.2), text(green, $e_p = infinity$))
+    
+    circle((mid_x, mid_y), radius: 0.05, fill: black)
+    line((0, mid_y), (mid_x, mid_y), stroke: (dash: "dotted"))
+    line((mid_x, 0), (mid_x, mid_y), stroke: (dash: "dotted"))
+    content((-0.7, mid_y), $(a/b)/2$)
+    content((mid_x, -0.4), $a/2$)
+    content((mid_x + 0.7, mid_y + 0.2), $e_p = 1$)
+    
+    circle((a, 0), radius: 0.05, fill: yellow)
+    content((a, -0.4), $a$)
+    content((a + 0.6, 0.4), text(yellow, $e_p = 0$))
+    
+    content((mid_x + 1.8, mid_y + 1.2), text(blue, [popyt elastyczny: $e_p > 1$]))
+    content((mid_x + 2.2, mid_y - 0.8), text(red, [popyt nieelastyczny: $0 < e_p < 1$]))
+    
+    content((-0.2, -0.2), $0$)
+  })
+]
+
+Jeśli dwie krzywe są równoległe, to mają rózną elastyczność dla tej samej ceny.
+
+=== Kiedy opłaca się obniżać ceny a kiedy nie?
+
+$
+  "Przychody producentów (TR)" = p * Q
+$
+
+#align(center, cetz.canvas(length: 2mm, {
+  import cetz.draw: *
+  line((0, 0), (0, 32), mark: (end: ">", fill: black))
+  line((0, 0), (62, 0), mark: (end: ">", fill: black))
+  
+  content((0, 34), [Cena (P)])
+  content((64, 0), [Ilość (Q)], anchor: "west")
+
+  rect((0,0), (36, 10), fill: rgb("389266"), stroke: black)
+  rect((0,0), (28, 14), fill: rgb("ff7200"), stroke: black)
+  rect((0,0), (16, 20), fill: rgb("5382bc"), stroke: black)
+
+  line((0, 28), (56, 0), stroke: 1.2pt)
+  content((30, 15), text(14pt, weight: "bold")[D], anchor: "south-west")
+
+  content((8, 15), text(weight: "bold")[TR 1])
+  content((22, 7), text(weight: "bold")[TR 2])
+  content((32, 5), text(weight: "bold")[TR 3])
+}))
+
+Wywnioskować można, że:
+- $e_"pd">1$, to spadek ceny (p) prowadzi do wzrostu TR (i odwrotnie)
+- $e_"pd"<1$, to wzrost ceny (p) prowadzi do wzrostu TR (i odwrotnie)
+- $e_"pd"=1$, to zmiana ceny nie wpływa na zmianę TR.
+
+== Elastyczność podaży
+
+Elastyczność cenowa podaży ($E_"PS"$) jest stosunkiem względnej zmiany podaży.
+
+$
+  E_("PS") = (Delta Q : Q_0" => skutek")/(Delta p : p_0" => przyczyna") = "% zmiana wielkości podaży"/ "% zmiany ceny"
+$
+
+#align(center, cetz.canvas(length: 1cm, {
+  import cetz.draw: *
+
+  line((0, 0), (0, 8), mark: (end: ">", fill: black))
+  line((0, 0), (10, 0), mark: (end: ">", fill: black))
+  
+  content((-0.2, 7.8), [Cena (p)], anchor: "east")
+  content((9.5, -0.6), [Ilość (Q)], anchor: "north")
+
+  line((0, 1), (8.5, 6.95), stroke: 1.2pt)
+  
+  content((9, 2), text(16pt, weight: "bold")[D])
+
+  line((4, 0), (4, 3.8), stroke: (dash: "dotted", thickness: 0.8pt))
+  line((0, 3.8), (4, 3.8), stroke: (dash: "dotted", thickness: 0.8pt))
+  content((4, -0.4), [$Q_0$])
+  content((-0.5, 3.8), [$p_0$])
+
+  line((7.5, 0), (7.5, 6.25), stroke: (dash: "dotted", thickness: 0.8pt))
+  line((0, 6.25), (7.5, 6.25), stroke: (dash: "dotted", thickness: 0.8pt))
+  content((7.5, -0.4), [$Q_1$])
+  content((5.75, -0.4), [$Delta Q$])
+  content((-0.5, 6.25), [$p_1$])
+  content((-0.5, 5), [$Delta p$])
+}))
