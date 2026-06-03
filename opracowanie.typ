@@ -1295,3 +1295,481 @@ popytu lub podażu.
 ]
 
 = Nadwyżka konsumenta i producenta, elastyczność popytu i podaży
+
+*Dobrobyt społeczny* (nadwyżka ekonomiczna):
+- podstawowa koncepcja wykorzystywana do mierzenia wyników osiąganych na danym rynku (w danej branży)
+- miara stanowiąca połączenie dobrobytu (nadwyżki) różnych grup społecznych w gospodarce
+- jest określany jako całkowita nadwyżka będąca sumą nadwyżek konsumenta i producenta
+
+Koncepcja nadwyżki konsumenta i producenta wykorzystywana jest w ekonomii do określania optymalnego poziomu produkcji.
+
+*Cena graniczna* - najwyższa cena do przyjęcia dla nabywcy lub najniższa cena do przyjęcia dla sprzedawcy.
+
+== Nadwyżka konsumenta (CS)
+
+Konsument jest zadowolony, jeżeli cena rynkowa danego dobra jest niższa od ceny, którą on byłby w stanie za to
+dobro zapłacić (od ceny granicznej).
+
+Nadwyżka pojedynczego konsumenta to:
+- różnica między sumą, którą jest on gotów zapłacić za daną ilość towarów (ceną graniczną), a sumą
+  którą faktycznie za nią płaci
+- korzyść, jaką konsument uzyskuje z zakupu danego produktu
+- jest mierzalna w pieniądzach
+
+*Nadwyżka konsumenta* to zagregowana wielkość nadwyżki wszystkich konsumentów w danej branży.
+
+Poniżej przykład nadwyżki konsumenta, w przypadku spadku ceny danego dobra.
+
+#align(center)[
+  #cetz.canvas({
+    import cetz.draw: *
+    
+    let green-fill = rgb("00b050")
+    let yellow-stroke = 2pt + rgb("ffcc00")
+    
+    line((0, 2.4), (0, 5.4), (3.0, 2.4), close: true, fill: green-fill, stroke: yellow-stroke)
+    line((0, 1.2), (0, 2.4), (3.0, 2.4), (3.0, 1.2), close: true, fill: green-fill, stroke: yellow-stroke)
+    line((3.0, 1.2), (3.0, 2.4), (4.2, 1.2), close: true, fill: green-fill, stroke: yellow-stroke)
+
+    line((0,0), (0, 6.2), mark: (end: "stealth", fill: black))
+    line((0,0), (6.5, 0), mark: (end: "stealth", fill: black))
+    
+    line((0, 5.4), (5.4, 0), stroke: 1pt + black)
+    content((5.0, 0.4), text(size: 20pt)[D])
+    
+    line((3.0, 1.2), (3.0, 0), stroke: 0.8pt + black)
+    line((4.2, 1.2), (4.2, 0), stroke: 0.8pt + black)
+
+    content((-0.4, 6.0), text(size: 18pt)[P #sub[(zł)]])
+    content((-0.6, 5.4), text(size: 16pt)[18])
+    content((-0.6, 2.4), text(size: 16pt)[8])
+    content((-0.6, 1.2), text(size: 16pt)[4])
+    
+    content((-0.3, -0.4), text(size: 16pt)[0])
+    content((3.0, -0.4), text(size: 16pt)[q#sub[0]])
+    content((4.2, -0.4), text(size: 16pt)[q#sub[1]])
+    content((5.4, -0.4), text(size: 16pt)[q#sub[max]])
+    content((6.3, -0.4), text(size: 18pt)[Q])
+
+    line((-0.2, 2.4), (-0.2, 1.2), stroke: 1.5pt + red, mark: (end: "stealth", fill: red))
+    
+    content((4.6, 4.6), align(left)[
+      #text(fill: rgb("e6a800"), size: 14pt)[Nadwyżka konsumenta (CS#sub[1])] \
+      #text(size: 12pt)[(pole poniżej krzywej popytu i powyżej \ ustalonej ceny)]
+    ], anchor: "west")
+    line((4.4, 4.4), (1.5, 3.8), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+
+    content((4.6, 2.8), align(left)[
+      #text(fill: rgb("007020"), size: 18pt)[Nadwyżka konsumenta (CS#sub[2])]
+    ], anchor: "west")
+    line((4.4, 2.7), (3.15, 2.25), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+
+    content((4.6, 1.5), align(left)[
+      #text(size: 14pt)[Nadwyżka konsumenta \ (nowi nabywcy)]
+    ], anchor: "west")
+    line((4.4, 1.5), (3.6, 1.5), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+
+    content((-1.2, 1.8), align(right)[
+      #text(size: 14pt)[Przyrost nadwyżki \ u dotychczasowych \ nabywców]
+    ], anchor: "east")
+    line((-1.0, 1.8), (1.5, 1.8), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+  })
+]
+
+Wielkość nadwyżki zależy od elastyczności krzywej popytu, im bardziej elastyczny popyt, tym nadwyżka jest niższa.
+
+#align(center)[
+*Dwie sytuacje wyjątkowe*
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 3em,
+    
+    align(left)[
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        line((0,0), (0, 5.8), mark: (end: "stealth", fill: black))
+        line((0,0), (5.5, 0), mark: (end: "stealth", fill: black))
+        
+        content((0.2, 5.6), text(size: 18pt)[P #text(size: 12pt)[(zł)]], anchor: "west")
+        content((5.5, -0.4), text(size: 18pt)[Q], anchor: "west")
+        
+        content((-0.5, 4.5), text(size: 16pt)[18])
+        content((-0.5, 2.2), text(size: 16pt)[8])
+        content((-0.1, -0.4), text(size: 16pt)[0])
+        
+        content((2.5, -0.4), text(size: 16pt)[q#sub[0]])
+        content((4.8, -0.4), text(size: 16pt)[q#sub[max]])
+        
+        line((0, 2.2), (5.2, 2.2), stroke: 3.5pt + rgb("ffc000"))
+        content((4.7, 1.7), text(size: 18pt)[D])
+        
+        line((2.5, 0), (2.5, 2.2), stroke: 0.8pt + black)
+      })
+      #align(center)[
+        gdy na rynku istnieją doskonałe \
+        substytuty dobra, nadwyżka \
+        konsumenta wynosi 0
+      ]
+    ],
+    
+    align(left)[
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        rect((0, 2.2), (3.0, 5.8), fill: rgb("ffe699"), stroke: none)
+        
+        line((0,0), (0, 5.8), mark: (end: "stealth", fill: black))
+        line((0,0), (5.5, 0), mark: (end: "stealth", fill: black))
+        
+        content((0.2, 5.6), text(size: 18pt)[P #text(size: 12pt)[(zł)]], anchor: "west")
+        content((5.5, -0.4), text(size: 18pt)[Q], anchor: "west")
+        
+        content((-0.5, 4.5), text(size: 16pt)[18])
+        content((-0.5, 2.2), text(size: 16pt)[8])
+        content((-0.1, -0.4), text(size: 16pt)[0])
+        
+        content((3.0, -0.4), text(size: 16pt)[q#sub[0]])
+        
+        line((3.0, 0), (3.0, 5.8), stroke: 1.2pt + black)
+        content((3.4, 4.8), text(size: 18pt)[D], anchor: "west")
+        
+        line((0, 2.2), (3.0, 2.2), stroke: 1.2pt + black)
+        
+        content((1.5, 4.0), text(size: 18pt)[CS])
+      })
+      #align(center)[
+        gdy popyt jest doskonale \
+        nieelastyczny nadwyżka \
+        konsumenta jest nieskończona
+      ]
+    ]
+  )
+  #text(size: 14pt, fill: red)[(obydwie te sytuacje są bardzo mało prawdopodobne)]
+]
+
+== Nadwyżka producenta (PS)
+
+Producenci mogliby sprzedawać niektóre jednostki po cenach niższych od ceny rynkowej.
+Sprzedając po cenie wyższej osiągają nadwyżkę - *nadwyżkę producenta*.
+
+Nadwyżka *pojedynczego* producenta to zysk, który osiąga ze sprzedaży określonego dobra.
+
+*Nadwyżka producenta* to różnica między rzeczywistym utargiem całkowitym otrzymanym ze sprzedaży
+określonej ilości jednostek danego dobra a minimalnym utargiem całkowitym, koniecznym
+do skłonienia producentów do dostarczenia tejże ilości dobra na rynek.
+
+Wzrost ceny danego dobra prowadzi do zwiększenia nadwyżki producenta.
+
+#align(center)[
+  #cetz.canvas({
+    import cetz.draw: *
+    
+    let blue-fill = rgb("9bb6d6")
+    let yellow-stroke = 2.5pt + rgb("ffcc00")
+    
+    line((0,0), (3.0, 2.4), (0, 2.4), close: true, fill: blue-fill, stroke: yellow-stroke)
+    
+    line((0, 2.4), (3.0, 2.4), (3.0, 4.2), (0, 4.2), close: true, fill: blue-fill, stroke: yellow-stroke)
+    
+    line((3.0, 2.4), (5.25, 4.2), (3.0, 4.2), close: true, fill: blue-fill, stroke: yellow-stroke)
+
+    line((0,0), (0, 6.2), mark: (end: "stealth", fill: black))
+    line((0,0), (7.0, 0), mark: (end: "stealth", fill: black))
+    
+    line((0,0), (6.0, 4.8), stroke: 1.2pt + black)
+    content((6.0, 4.3), text(size: 20pt)[S])
+    
+    line((3.0, 2.4), (3.0, 0), stroke: 0.8pt + black)
+    line((5.25, 4.2), (5.25, 0), stroke: 0.8pt + black)
+
+    content((-0.4, 6.0), text(size: 18pt)[P #sub[(zł)]])
+    content((-0.6, 5.4), text(size: 16pt)[18])
+    content((-0.6, 4.2), text(size: 16pt)[14])
+    content((-0.6, 2.4), text(size: 16pt)[8])
+    
+    content((-0.3, -0.4), text(size: 16pt)[0])
+    content((3.0, -0.4), text(size: 16pt)[q#sub[0]])
+    content((5.25, -0.4), text(size: 16pt)[q#sub[1]])
+    content((6.2, -0.4), text(size: 16pt)[q#sub[max]])
+    content((6.8, -0.4), text(size: 18pt)[Q])
+
+    
+    line((-0.2, 2.4), (-0.2, 4.2), stroke: 1.5pt + red, mark: (end: "stealth", fill: red))
+    
+    content((0.6, 5.2), align(left)[
+      #text(fill: rgb("ffb300"), size: 14pt)[Nadwyżka producenta (PS#sub[1])] \
+      #text(size: 12pt)[(pole powyżej krzywej podaży i poniżej \ ustalonej ceny)]
+    ], anchor: "west")
+    line((0.4, 5.4), (0.4, 1.2), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+
+    content((5.8, 3.5), align(left)[
+      #text(fill: rgb("3b5998"), size: 14pt)[Nadwyżka producenta \ (PS#sub[2])]
+    ], anchor: "west")
+    line((5.6, 3.5), (2.2, 3.5), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+
+    content((3.8, 1.5), align(left)[
+      #text(size: 14pt)[Nadwyżka producenta \ (nowi oferujący)]
+    ], anchor: "west")
+    line((4.2, 1.9), (3.6, 2.9), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+
+    content((-1.2, 3.3), align(left)[
+      #text(size: 14pt)[Przyrost nadwyżki \ u dotychczasowych \ producentów]
+    ], anchor: "east")
+    line((-1.0, 3.3), (1.5, 3.3), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+  })
+]
+
+Wielkość nadwyżki producenta zależy od elastyczności krzywej podaży - im bardziej elastyczna,
+tym mniejsza nadwyżka producenta. Jeśli jest doskonale elastyczna, nadwyżka producenta wynosi 0.
+
+== Całkowita nadwyżka producenta i konsumenta ES = CS + PS
+
+#align(center)[
+  #grid(
+    columns: (1.3fr, 1fr),
+    column-gutter: 2em,
+    
+    align(left)[
+      
+      - nadwyżka ekonomiczna (ES) \
+        *suma* różnic między cenami
+        granicznymi nabywców i
+        sprzedawców kolejnych
+        jednostek towaru
+        wymienianych na rynku
+      - *różnica* między całkowitymi
+        korzyściami a całkowitymi
+        kosztami społecznymi
+      - Nadwyżka całkowita = \
+        wartość dla nabywców -- koszty sprzedawców
+      - uproszczona miara dobrobytu ekonomicznego społeczeństwa
+    ],
+    
+    align(left)[
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        let cs-fill = rgb("f4d093")
+        let ps-fill = rgb("5b8fcc")
+        let cost-fill = rgb("ff7300")
+        let yellow-stroke = 2pt + rgb("ffcc00")
+        
+        line((0, 0), (3.0, 2.4), (3.0, 0), close: true, fill: cost-fill, stroke: 0.8pt + black)
+        line((0, 0), (0, 2.4), (3.0, 2.4), close: true, fill: ps-fill, stroke: yellow-stroke)
+        line((0, 2.4), (0, 5.4), (3.0, 2.4), close: true, fill: cs-fill, stroke: yellow-stroke)
+        line((0,0), (0, 6.2), mark: (end: "stealth", fill: black))
+        line((0,0), (6.5, 0), mark: (end: "stealth", fill: black))
+        line((0, 5.4), (5.4, 0), stroke: 1pt + black)
+        content((5.3, 0.5), text(size: 18pt)[D])
+        
+        line((0,0), (5.7, 4.56), stroke: 1pt + black)
+        content((5.7, 4.0), text(size: 18pt)[S])
+
+        content((-0.3, 6.0), text(size: 16pt)[P #sub[(zł)]], anchor: "west")
+        content((-0.2, 5.4), text(size: 16pt)[18], anchor: "east")
+        content((-0.2, 2.4), text(size: 16pt)[8], anchor: "east")
+        
+        content((-0.2, -0.4), text(size: 16pt)[0], anchor: "east")
+        content((3.0, -0.4), text(size: 16pt)[q#sub[0]])
+        content((5.8, -0.4), text(size: 16pt)[q#sub[max]])
+        content((6.7, -0.4), text(size: 18pt)[Q], anchor: "west")
+
+        content((1.0, 3.4), text(size: 16pt)[CS])
+        content((1.0, 1.4), text(size: 16pt)[PS])
+        
+        content((4.0, 2.2), align(left)[
+          #text(size: 16pt)[Koszty \ sprzedawców]
+        ], anchor: "west")
+        line((4.0, 1.8), (2.2, 0.8), mark: (end: "stealth", fill: black), stroke: 0.8pt + black)
+      })
+    ]
+  )
+]
+
+== Efektywność ekonomiczna a marnotrawstwo
+
+- Marnotrawstwo:
+  - Zakup dobra, które nie zapewnia odpowiednich korzyści.
+  - Produkcja dobra, którego nikt nie chce kupić.
+- Efektywność:
+  - Cecha alokacji zasobów oznaczająca maksymalizację nadwyżki całkowitej osiąganej przez wszystkich członków społeczeństwa.
+- Efektywność w sensie Pareto:
+  - gdy niemożliwa jest realokacja zasobów prowadząca do poprawy jednego podmiotu bez pogorszenia sytuacji innego podmiotu
+- Poprawa w sensie Pareto:
+  - polepszenie sytuacji co najmniej jednego podmiotu ekonomicznego w wyniku pewnego działania bez pogorszenia sytuacji innego podmiotu
+
+== Ingerencja państwa na rynku
+
+- Ceny maksymalne i minimalne
+- Podatki
+- Dobrowolne ograniczenie produkcji (np umowa ograniczenia produkcji)
+- Subsydium (państwo dopłaca do sprzedaży towarów)
+- Cło (podatek od importu)
+
+
+#line(length: 100%, stroke: 0.25pt)
+
+#align(center)[
+*Cena maksymalna*
+  #grid(
+    columns: (1fr, 2fr),
+    column-gutter: 2em,
+    
+    align(left)[
+      - przenosi część nadwyżki producenta na konsumenta
+      
+      - konsument oraz producent tracą bezpowrotnie część swoich nadwyżek
+    ],
+    
+    align(left)[
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        let cs-fill = rgb("dcedc1")
+        let ps-fill = rgb("a8c6fa")
+        let dwl-fill = rgb("558ed5")
+        let bracket-red = rgb("c0504d")
+        
+        line((0, 1.6), (2.0, 1.6), (2.0, 3.4), (0, 5.4), close: true, fill: cs-fill, stroke: 0.8pt + black)
+        line((0, 0), (2.0, 1.6), (0, 1.6), close: true, fill: ps-fill, stroke: 0.8pt + black)
+        line((2.0, 1.6), (3.0, 2.4), (2.0, 3.4), close: true, fill: dwl-fill, stroke: 0.8pt + black)
+        line((2.0, 2.4), (3.0, 2.4), stroke: (dash: "dashed", thickness: 0.8pt))
+        line((0,0), (0, 6.2), mark: (end: "stealth", fill: black))
+        line((0,0), (6.5, 0), mark: (end: "stealth", fill: black))
+        line((0, 5.4), (5.4, 0), stroke: 1pt + black)
+        content((5.4, 0.5), text(size: 18pt)[D])
+        line((0, 0), (5.7, 4.56), stroke: 1pt + black)
+        content((5.8, 4.9), text(size: 18pt)[S])
+        line((0, 1.6), (6.0, 1.6), stroke: 0.8pt + black)
+        content((-0.8, 1.6), text(size: 14pt)[Cena maksymalna], anchor: "east")
+        line((-0.7, 1.6), (-0.1, 1.6), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+        line((2.0, 1.6), (2.0, 0), stroke: (dash: "dashed", thickness: 0.8pt))
+        line((3.8, 1.6), (3.8, 0), stroke: (dash: "dashed", thickness: 0.8pt))
+        line((2.0, 1.4), (2.0, 1.0), (3.8, 1.0), (3.8, 1.4), stroke: 1.5pt + bracket-red)
+        line((2.9, 1.0), (2.9, 0.7), stroke: 1.5pt + bracket-red)
+        content((2.9, 0.3), align(center)[
+          Niedobór \ rynkowy
+        ])
+
+        content((-0.9, 6.0), text(size: 16pt)[P#sub[(zł)]], anchor: "west")
+        content((-0.2, 5.4), text(size: 16pt)[18], anchor: "east")
+        content((-0.2, -0.3), text(size: 16pt)[0], anchor: "east")
+        content((6.5, -0.3), text(size: 18pt)[Q], anchor: "west")
+        content((5.4, -0.3), text(size: 16pt)[q#sub[max]])
+        content((2.0, -0.3), text(size: 16pt)[Q#sub[s1]])
+        content((3.8, -0.3), text(size: 16pt)[Q#sub[D1]])
+        content((1.2, -1.3), align(center)[
+          #text(size: 10pt)[Wlk. *podaży* \ po wprowadzeniu ceny \ maksymalnej]
+        ])
+        content((4.4, -1.3), align(center)[
+          #text(size: 10pt)[Wlk. *popytu* \ po wprowadzeniu \ ceny maksymalnej]
+        ])
+        content((0.8, 3.0), text(size: 18pt)[CS])
+        content((0.8, 1.2), text(size: 16pt)[PS])
+        content((3.5, 4.6), align(center)[
+          Bezpowrotna \ (zbędna) \ strata społeczna
+        ])
+        line((3.5, 3.9), (2.4, 2.6), mark: (end: "stealth", fill: red), stroke: 1.5pt + red)
+      })
+    ]
+  )
+]
+
+#align(center)[
+*Cena minimalna*
+  #grid(
+    columns: (1fr, 2fr),
+    column-gutter: 2em,
+    
+    align(left)[
+      - przenosi część nadwyżki z konsumenta na producenta
+      - konsument oraz producent tracą bezpowrotnie część swoich nadwyżek
+    ],
+    align(left)[
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        // Zdefiniowane kolory
+        let cs-fill = rgb("e8f5e9")
+        let ps-fill = rgb("c9daf8")
+        let dwl-fill = rgb("558ed5")
+        let bracket-red = rgb("c0504d")
+        let yellow-stroke = 2.5pt + rgb("ffcc00")
+        
+        line((0, 3.4), (2.0, 3.4), (0, 5.4), close: true, fill: cs-fill, stroke: none)
+        line((0, 0), (2.0, 1.6), (2.0, 3.4), (0, 3.4), close: true, fill: ps-fill, stroke: none)
+        line((2.0, 1.6), (3.0, 2.4), (2.0, 3.4), close: true, fill: dwl-fill, stroke: none)
+        line((0, 5.4), (3.0, 2.4), (0, 0), (0, 5.4), stroke: yellow-stroke)
+        line((0, 3.4), (2.0, 3.4), stroke: 0.8pt + black)
+        line((2.0, 1.6), (2.0, 3.4), stroke: 0.8pt + black)
+        line((2.0, 2.4), (3.0, 2.4), stroke: (dash: "dashed", thickness: 0.8pt))
+        line((0,0), (0, 6.2), mark: (end: "stealth", fill: black))
+        line((0,0), (6.5, 0), mark: (end: "stealth", fill: black))
+        line((0, 5.4), (5.4, 0), stroke: 1pt + black)
+        content((5.1, 0.5), text(size: 18pt)[D])
+        line((0, 0), (5.7, 4.56), stroke: 1pt + black)
+        content((5.7, 4.0), text(size: 18pt)[S])
+        line((0, 3.4), (6.0, 3.4), stroke: 0.8pt + black)
+        content((-0.8, 3.4), text(size: 14pt)[Cena minimalna], anchor: "east")
+        line((-0.7, 3.4), (-0.1, 3.4), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+        line((2.0, 3.4), (2.0, 0), stroke: (dash: "dashed", thickness: 0.8pt))
+        line((4.25, 3.4), (4.25, 0), stroke: (dash: "dashed", thickness: 0.8pt))
+        line((2.0, 3.4), (2.0, 3.8), (4.25, 3.8), (4.25, 3.4), stroke: 1.5pt + bracket-red)
+        line((3.125, 3.8), (3.125, 4.1), stroke: 1.5pt + bracket-red)
+        content((3.125, 4.7), align(center)[
+          #text(size: 14pt)[Nadwyżka \ rynkowa]
+        ])
+        line((4.8, 2.4), (2.5, 2.4), mark: (end: "stealth", fill: red), stroke: 2pt + red)
+        content((5.0, 2.4), align(left)[
+          #text(size: 16pt)[Bezpowrotna \ strata społeczna]
+        ], anchor: "west")
+        content((-0.9, 6.0), text(size: 16pt)[P#sub[(zł)]], anchor: "west")
+        content((-0.2, 5.4), text(size: 16pt)[18], anchor: "east")
+        content((-0.2, -0.3), text(size: 16pt)[0], anchor: "east")
+        content((6.5, -0.3), text(size: 18pt)[Q], anchor: "west")
+        content((5.4, -0.3), text(size: 16pt)[q#sub[max]])
+        content((2.0, -0.3), text(size: 16pt)[Q#sub[D1]])
+        content((4.25, -0.3), text(size: 16pt)[Q#sub[S1]])
+        content((1.2, -1.3), align(center)[
+          #text(size: 10pt)[Wlk. *popytu* \ po wprowadzeniu ceny \ minimalnej]
+        ])
+        content((4.4, -1.3), align(center)[
+          #text(size: 10pt)[Wlk. *podaży* \ po wprowadzeniu \ ceny minimalnej]
+        ])
+        content((0.5, 4.2), text(size: 18pt)[CS])
+        content((0.5, 2.4), text(size: 18pt)[PS])
+      })
+    ]
+  )
+]
+
+#warning(title: "Brakujące rzeczy!")[
+  Nie zrobiłem wykresów: podatków kwotowych oraz subsydiów. Naucz się jak wykres zachowa się w obu przypadkach.]
+
+#line(length: 100%, stroke: 0.25pt)
+
+== Elastyczność popytu
+
+Określa intensywność reakcji nabywców na zmiany czynników oddzialywujących na popyt (np. ceny czy dochodu)
+
+- Elastyczność względem ceny (elastyczność cenowa popytu) - interesuje nas *siła reakcji* wielkości popytu na zmieniającą się cenę
+- Elastyczność względem dochodu (elastyczność dochodowa popytu)
+- Elastyczność względem cen innych dóbr (elastyczność mieszana popytu)
+
+Elastyczność danej wielkości względem danego czynnika wyraża się stosunkiem:
+
+$
+  "względna zmiana wielkości (np. popytu lub podaży)"/"względnej zmiany tego cznnika (np. ceny, dochodu)"
+$
+
+*Prawo popytu*: ze wzrostem ceny maleje ilość dobra, którą konsumenci są skłonni i są w stanie nabyć przy
+danym poziomie ceny przy założeniu, że pozostałe warunki nie uległy zmianie (ceteris paribus) i odwrotnie.
+
+// TODO: tutaj wykresy
+#warning(title: "Nieukończone")[Tu powinny być wykresy ale brak czasu, może dokończę później]
+
+Miarą reakcji wielkości popytu na zmieniającą się cenę jest współczynnik elastyczności cenowej popytu:
+$
+  E_("PD") = (Delta Q : Q_0" => skutek")/(Delta p : p_0" => przyczyna")
+$
