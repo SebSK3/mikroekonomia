@@ -1073,7 +1073,7 @@ produktu (p)
 ]
 ]
 
-#align(center)[*Równowaga rynku*]
+== Równowaga rynku
 
 #grid(
   columns: (1.5fr, 1fr),
@@ -1214,3 +1214,81 @@ produktu (p)
 )
 
 #warning(title: "Tu pojawia się zadanie na slajdach")[Zrozum co się dzieje na wykresach, gdyby pojawiły się liczby!]
+
+Cena równowagi rynkowej *nie jest raz na zawsze ustalona*, zmienia się pod wpływem zmian pozacenowych czynników
+popytu lub podażu.
+
+#align(center)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+      #text(size: 16pt)[Wzrost popytu (+)]
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        line((0,0), (0, 5.5), mark: (end: "stealth", fill: black))
+        line((0,0), (6.5, 0), mark: (end: "stealth", fill: black))
+        
+        content((-0.6, 5.0), align(center)[Cena \ (P)])
+        content((6.0, -0.6), align(center)[Ilość \ (Q)])
+        
+        bezier((0.5, 4.5), (4.5, 0.5), (0.5, 1.83), (1.83, 0.5), stroke: 1.5pt + black)
+        bezier((2.0, 4.5), (6.0, 1), (2.0, 1.83), (3.33, 1), stroke: 1.5pt + red)
+        
+        content((4, 0.8), text(size: 12pt)[D#sub[1]])
+        content((6.2, 0.8), text(size: 12pt)[D#sub[2]])
+        
+        content((-0.4, 1.5), [Pd])
+        line((0, 1.5), (3.3, 1.5), stroke: (dash: "dotted", thickness: 1pt, paint: red), mark: (end: "stealth", fill: red))
+        
+        line((1.5, 1.5), (1.5, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+        line((3.3, 1.5), (3.3, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+        
+        content((1.5, -0.4), [qd1])
+        content((3.3, -0.4), [qd2])
+        
+        line((0.75, 2.75), (2.3, 2.75), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+        line((1.75, 1.25), (3.95, 1.25), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+        
+        line((1.5, -1.0), (3.3, -1.0), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+      })
+    ],
+    
+    [
+      #text(size: 16pt)[Spadek popytu (-)]
+      #cetz.canvas({
+        import cetz.draw: *
+        
+        line((0,0), (0, 5.5), mark: (end: "stealth", fill: black))
+        line((0,0), (6.5, 0), mark: (end: "stealth", fill: black))
+        
+        content((-0.6, 5.0), align(center)[Cena \ (P)])
+        content((6.0, -0.6), align(center)[Ilość \ (Q)])
+        
+        bezier((2.0, 4.5), (6.0, 1), (2.0, 1.83), (3.33, 1), stroke: 1.5pt + black)
+        bezier((0.5, 4.5), (4.5, 0.5), (0.5, 1.83), (1.83, 0.5), stroke: 1.5pt + rgb("228B22"))
+        
+        content((6.2, 0.8), text(size: 12pt)[D#sub[1]])
+        content((4.7, 0.8), text(size: 12pt)[D#sub[2]])
+        
+        content((-0.4, 1.5), [Pd])
+        line((0, 1.5), (3.3, 1.5), stroke: (dash: "dotted", thickness: 1pt, paint: rgb("228B22")))
+        line((3.3, 1.5), (1.5, 1.5), stroke: (dash: "dotted", thickness: 1pt, paint: rgb("228B22")), mark: (end: "stealth", fill: rgb("228B22")))
+        
+        line((1.5, 1.5), (1.5, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+        line((3.3, 1.5), (3.3, 0), stroke: (dash: "dotted", thickness: 0.8pt))
+        
+        content((1.5, -0.4), [qd2])
+        content((3.3, -0.4), [qd1])
+        
+        line((2.3, 2.75), (0.75, 2.75), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+        line((3.95, 1.25), (1.75, 1.25), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+        
+        line((3.3, -1.0), (1.5, -1.0), mark: (end: "stealth", fill: black), stroke: 0.8pt)
+      })
+    ]
+  )  
+  #v(1em)
+  #text(size: 15pt)[na skutek działania determinant pozacenowych]
+]
