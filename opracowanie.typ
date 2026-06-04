@@ -2258,3 +2258,199 @@ $
 - $0<K\S\K<P\S\K$ ($0<E_M<1$) - dobro podstawowe normalne
 - $K\S\K<0$ ($E_M<0$) - dobro podstawowe niższego rzędu
 
+= Produkcja i decyzje producenta na rynku konkurencji doskonałej
+
+Produkcja to *proces* wytwarzania dóbr zaspokajających potrzeby społeczne.
+
+*Proces*:
+- działalność zorganizowana, wymagająca logicznie uporządkowanego zespołu czynności
+- działalność powtarzająca się (a nie akt jednorazowy).
+
+Produkcja odbywa się w *przedsiębiorstwach*, czyli podmiotach gospodarczych wyodrębnionych pod względem
+ekonomicznym, prawnym i organizacyjnym, które działają w sferze produkcji realnej albo w sferze
+pieniężno-finansowej.
+
+#block(breakable:false)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+*Przedsiębiorstwa sfery realnej* prowadzą działalność gospodarczą polegającą na:
+- zakupie czynników produkcji
+- wytwarzaniu produktów (procesu produkcji)
+- sprzedaży wytworzonych produktów
+], [
+Organizacja procesu produkcji składa się z:
+- przygotowania produkcji
+- procesu technologicznego (przetwarzanie materiałów w produkty gotowe)
+- kontroli technicznej
+- czynności pomocniczych
+])]
+
+Niezbędne do produkcji *elementy* nazywamy *czynnikami produkcji*. Popyt na czynniki produkcji jest czynnikiem
+pochodnym.
+
+== Czynniki produkcji
+
+*Praca (L)* - usługa produkcyjna świadczona przez ludzi świadczonych w przedsiębiorstwie. Mozna liczyć w:
+- osobogodzinach (H)
+- liczbie osób zatrudnionych (L) w ciągu h godzin czasu pracy przedsiębiorstwa
+
+*Kapitał rzeczowy (K)* (środki trwałe, dobra kapitałowe) - dobra prodykcyjne uczestniczące w wielu cyklach produkcyjnych.
+Nie poedlegają bezpośrednio przekształceniu w produkt.
+
+*Materiały (m)* - środki w postaci surowców, półfabrykantów, energii i paliw, które ulegają całkowitemu przetworzeniu
+w produkt w jednym cyklu produkcyjnym. Miarą tego nakładu jest ilość zużytych dóbr pośrednich i-tego rodzaju ($m_i$) wykorzystywana
+do wyprodukowania produktu ($q$) w ciągu wyodrębnionego okresu.
+
+*Technologia (A)* - wiedza o sposobach wykorzystania pracy, kapitału i produktów pośrednich przy
+wytwarzaniu produktu końcowego. *Technologia produkcji wyznacza proporcje zastosowanych
+czynników ludzkich i rzeczowych w procesach produkcji*.Można rozdzielić na:
+- wiedza zatrudnionych w przedsiębiorstwie osób (kapitał ludzki)
+- wiedza upostaciowiona w dobrach kapitałowych (jakość maszyn, komputerów, oprogramowania), którymi osoby zatrudnione posługują się
+
+$
+  "Funkcja produkcji:" T\P\P = f(L,K,A)
+$
+
+*Krótkookresowa* funkcja produkcji to funkcja jednej zmiennej L, a *długookresowa* to zmienność wszystkich czynników.
+
+#align(center)[
+#block(breakable:false)[
+  *Istota procesu produkcji*
+
+  Zatrudnieni w przedsiębiorstwie ludzie, \
+  wykorzystując udostępnione im środki techniczne, \
+  w ustalonym wymiarze czasu pracy, stosując określone metody, \
+  przekształcają materiały w dobra ekonomiczne, \
+  stanowiące *produkt końcowy*.
+]
+]
+
+*Prawo malejących przychodów*: od pewnego poziomu w wyniku zwiększania nakładów jednego czynnika, przy założeniu
+stałości pozostałych, produkcja rośnie coraz wolniej. *Przyrosty produkcji są coraz mniejsze*, oraz
+*krańcowa produktywność (MP)* tego czynnika maleje
+
+#block(breakable:false)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+      *Krótki okres czasu*
+
+      Zmiennymi są czynnik pracy i produkty pośrednie. Zmianie nie ulegają czynniki, które mogą
+      uczestniczyć w wielu cyklach produkcyjnych (kapitał rzeczowy, technologia).
+
+      Analizuje się tylko wpływ pracy (L) na wielkość produkcji.
+      $
+        Q = F(L)
+      $
+    ],
+    [
+      *Długi okres czasu*
+
+      Wszystkie czynniki produkcji ulegają zmianie. Skutki dotyczą wielu cykli produkcyjnych. \
+      Wielocznnikowa funkcja produkcji (hipotetyczne możliwości podażowe przedsiębiorstwa):
+      $
+        Q = F(K_(t(+)),L_(t(+)), A_(t(+))), (t=1,2,3,...n) \
+        m_"ti" = a_"ti" * q_"ti"
+      $
+      Określa ona maksymalne rozmiary produkcji, jakie przedsiębiorstwo może osiągnąć na danym poziomie
+      i strukturze czynników produkcji (pracy, kapitału i technologii).
+    ]
+    )
+]
+
+== Konkurencja
+
+Konkurencja to proces, za pomocą którego uczestnicy rynku dążą do realizacji swych interesów, próbują
+przedstawić korzystniejsze od innych oferty pod względem ceny, jakości, lub innych charakterystyk wpływających
+na decyzje zawarcia transakcji.
+
+#block(breakable:false)[
+
+#align(center)[*Struktury rynkowe w zależności od stopnia intensywności konkurencji*]
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+      *Od strony podaży (sprzedających)*
+
+      - Konkurencja monopolistyczna
+      - Oligopol
+      - Monopol pełny
+    ], [
+      *Od strony popytu (kupujących)*
+
+      - Konkurencja monopsonowa
+      - Oligopson
+      - Monopson
+    ]
+  )
+]
+
+Rynek konkurencyjny (konkurencji doskonałej):
+- wiele nabywców i wielu sprzedawców
+- identycze produkty
+- egzogeniczność cen produktów pośrednich i cen sprzedawanego produktu
+- przedsiębiorstwa mogą swobodnie wchodzić na rynek i wychodzić z rynku
+
+#info[Egzogeniczność cen, czyli ceny są z góry narzucone przez czynniki zewnętrzne.]
+
+Konkurencyjna firma:
+- traktuje ceny czynników produkcji jako stałe
+- traktuje cenę rynkową jako stałą
+- jest cenobiorcą (nie ma wpływu na wyoskość ceny)
+
+Wynik finansowy - różnica pomiędzy przychodem całkowitym (TR) a kosztami całkowitymi (TC).
+$
+  Pi(q) &= T\R(q) - T\C(q) \
+  "Wynik finansowy" &= "przychody" - "koszty"
+$
+
+- Zysk - dodatni wynik finansowy
+- Strata - ujemny wynik finansowy
+- Zysk normalny - zerowy wynik finansowy
+
+= Koszty przedsiębiorstwa
+
+Wydatki na zakup czynników produkcji nazywamy *kosztami produkcji*. O wysokości decydują:
+- poziom realizowanej produkcji
+- technologia narzucająca wielkości nakładów i granice proporcji między nakładami w procesie produkcji
+- ceny nabywanych czynników produkcji
+
+Koszty *księgowe*, to faktyczne udokumentowane wydatki pieniężne (zakup surowców, płace, amortyzacje). Koszty
+*ekonomiczne* są pojęciem szerszym.
+
+Kosztem podjętej działalności jest utrata możliwości alternatywnego wykorzystania
+zaangażowanych środków - *koszt alternatywny*. Alternatywy muszą być porównywalne, jeśli chodzi
+o poziom ryzyka.
+
+$
+  "Przychód przedsiębiorstwa (TR)" = "wydatki nabywców (P*Q)" \
+  "Koszty księgowe " (c_j) + "Koszty alternatywne" (c_u) = "Koszty całkowite" (T\C) \
+  "TR" - "Koszty księgowe" (c_j) = "Wynik księgowy" \
+  "TR" - "Koszty całkowite (TC)" = "Wynik ekonomiczny"
+$
+
+- $T\R > T\C$ - zysk ekonomiczny
+- $T\R = T\C$ - zysk normalny
+- $T\R < T\C$ - strata ekonomiczna
+
+#block(breakable:false)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2em,
+    [
+      *Koszty w krótkim okresie* - podział kosztów na stałe i zmienne.
+      $
+        "Koszty stałe (FC)" - "Koszty zmienne (VC)" = "Koszty całkowite (TC)"
+      $
+    ], [
+      *Koszty w długim okresie* - wszystkie koszty są zmienne, brak kosztów stałych
+      $
+        V\C = T\C
+      $
+    ]
+  )
+]
