@@ -2454,3 +2454,74 @@ $
     ]
   )
 ]
+
+#warning(title: "Brak czasu")[Niestety przez brak czasu od tego momentu pomijam wykresy. Zostawiam ważne wzory.]
+
+
+*Koszty stałe* można podzielić na: *bezwzględnie stałe* (całkowicie niezależne od produkcji) oraz
+*koszty skokowo stałe* (stałe w pewnym przedziale produkcji np. koszt wynajmu).
+
+*Koszty zmienne VC(Q)* - całość kosztów zaleznych od wielkości produkcji. Ulegają zmianie wraz ze zmianami wielkości
+produkcji w danym okresie.
+
+- Koszty zmienne proporcjonalne - przyrost produkcji towarzyszy proporcjonalny wzrost kosztów zmiennych
+- Koszty zmienne progresywne - koszt zmiennych jest szybszy niż wzrost produkcji
+- Koszty zmienne degrysywny - przyrost produkcji towarzyszy wzrost kosztów zmiennych, ale jest wolniejszy niż
+  wzrost produkcji.
+
+*Koszty zmienne (VC)* - wyznaczane przez:
+- koszty pracowników produkcyjncych (VCL)
+- koszty zużycia produktów pośrednich (surowców, materiałów, energii, paliw) (VCM)
+
+$
+  V\C = V\C\L + V\C\M
+$
+
+Koszty całkowite (TC) - całkowite koszty ekonomiczne ponoszone przy realizacji określonej wielkości produkcji Q.
+
+$
+  T\C(Q) = F\C(Q)+V\C(Q), "gdzie "F\C = "koszty stałe"
+$
+
+- *Koszty przeciętne (AC)* - średnie koszta wytworzenie jednej jednostki
+- *Przeciętny koszt stały (AFC)* - ile kosztu stałego przypada na jedną jednostkę
+- *Przeciętny koszt zmienny (AVC)* - ile kosztu zmiennego przypada na jedną jednostkę
+
+$
+  A\C(Q) = A\F\C(Q)+A\V\C(Q)\
+  "oraz"\
+  A\V\C(Q) = (V\C(Q))/Q \
+  A\C(Q) = (T\C(Q))/Q
+$
+
+*Koszt marginalny (MC)* - koszt zwiększenia produkcji o jedną jednostkę. To pochodna funkcji $T\C(Q)$.
+
+Kilka zależności (wizualizacja: wykład 5,6 strona 41):
+- Pole pod wykresem MC jest równe VC
+- Gdy MC poniżej AVC to AVC malejąca, gdy MC powyżej AVC to AVC rosnąca, MC przecina AVC w minimum
+- Gdy MC poniżej AC to AC malejąca, gdy MC powyżej AC to AC rosnąca, MC przecina AC w minimum
+
+*Koszty utopione*- nie powinny być brane pod uwagę w analizie ekonomicznej przyszłych decyzji. To wydatki poniesione,
+które nie mogą zostać odzyskane.
+
+*Wynik finansowy* - różnica pomiędzy przychodem całkowitym (TR) a kosztami całkowitymi.
+
+$
+  Pi(q) &= T\R(q) - T\C(q) \
+  "Wynik finansowy" &= "przychody" - "koszty"
+$
+
+== Przychody (TR)
+
+Przychód całkowity - iloczyn ceny i sprzedanej ilości produktów: $T\R = p * q$
+
+Przychód przeciętny (AR) - stosunek przychodu całkowitego do ilości sprzedanych produktów: $A\R = (T\R(q))/q$
+
+Przychód krańcowy (marginalny) - stosunek przyrostu przychodu całkowitego ($Delta T\R$) do przyrostu ilości
+sprzedanych produktów ($Delta q$). Obliczany jako: $M\R = (Delta T\R(q)/(Delta q))$. Przy egzogeniczności
+cen: $M\R = p = A\R$ (przychód krańcowy równy cenie równy przeciętnemu przychodowi).
+
+*Próg rentowności*- poziom produkcji po którym następuje zrównanie przychodu całkowitego z kosztami całkowitymi
+($T\R(q) = T\C(q)$), na tym poziomie nie ma strat ani zysków ($Pi(q) = 0$). W przypadku egzogeniczności cen:
+$T\R(q)=T\C(q), "gdy" p=A\C(q)$
+
